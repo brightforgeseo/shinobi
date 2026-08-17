@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import SpeechBubble from '../components/SpeechBubble.astro';
+
+const services = [
+  {
+    title: 'Keyword Research',
+    mangaName: 'Scouting Jutsu',
+    description:
+      'Discover high-value targets before your competitors even sense them. Data-driven keyword strategies that fuel sustainable growth.',
+    icon: '🔍',
+  },
+  {
+    title: 'On-Page SEO',
+    mangaName: 'Page Power Form',
+    description:
+      'Optimize every element on the page for maximum ranking power and exceptional user experience.',
+    icon: '📄',
+  },
+  {
+    title: 'Technical SEO',
+    mangaName: 'Code Ninjutsu',
+    description:
+      'Fix the foundation. Lightning-fast sites, perfect crawlability, and rock-solid technical health.',
+    icon: '⚙️',
+  },
+  {
+    title: 'Link Building',
+    mangaName: 'Alliance Forging',
+    description:
+      'Build authoritative connections across the web. Quality backlinks that signal strength to search engines.',
+    icon: '🔗',
+  },
+  {
+    title: 'Content Strategy',
+    mangaName: 'Story Arc Mastery',
+    description:
+      'Craft compelling content that ranks and converts. From pillar pages to complete content calendars.',
+    icon: '✍️',
+  },
+  {
+    title: 'SEO Audits',
+    mangaName: 'Full Status Scan',
+    description:
+      'Deep diagnostic of your site’s ranking potential. Clear, actionable roadmap to victory.',
+    icon: '📊',
+  },
+];
+---
+
+<Layout
+  title="Shinobi SEO | Master the Art of Rankings"
+  description="Dominate the SERPs with elite SEO techniques forged in the digital dojo. We turn ordinary sites into ranking legends."
+>
+  <Hero />
+
+  <!-- Signature Techniques -->
+  <section class="py-20 px-4" id="techniques">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="font-bangers text-4xl md:text-5xl mb-3">
+          Our Signature <span class="text-anime-cyan">Techniques</span>
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Precision. Power. Results. Choose your path to ranking mastery.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service) => <ServiceCard {...service} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 px-4 bg-anime-panel/60">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-bangers text-4xl md:text-5xl text-center mb-14">
+        What Clients <span class="text-anime-pink">Say</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <SpeechBubble
+          text="Shinobi SEO didn’t just improve our rankings — they transformed our entire growth engine. Absolute masters of the craft!"
+          author="Alex, SaaS Founder"
+        />
+        <SpeechBubble
+          text="From page 5 to position #1 in four months. Their techniques are genuinely next level. Highly recommended."
+          author="Jordan, E-commerce Lead"
+          position="right"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-24 px-4 text-center">
+    <h2 class="font-bangers text-4xl md:text-6xl mb-6">
+      Ready to <span class="text-anime-pink">Dominate</span>?
+    </h2>
+    <p class="text-xl text-gray-300 mb-10 max-w-xl mx-auto">
+      Summon the Shinobi team and begin your ranking journey today.
+    </p>
+    <a
+      href="/contact"
+      class="inline-block px-10 py-5 bg-anime-cyan text-anime-dark font-bangers text-2xl rounded-xl border-4 border-black shadow-[8px_8px_0_#FF2D55] hover:shadow-[4px_4px_0_#FF2D55] hover:translate-x-1 hover:translate-y-1 transition-all"
+    >
+      Summon Us Now
+    </a>
+  </section>
+</Layout>

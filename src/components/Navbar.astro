@@ -1,0 +1,65 @@
+---
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Techniques' },
+  { href: '/case-studies', label: 'Legends' },
+  { href: '/about', label: 'Dojo' },
+  { href: '/contact', label: 'Summon Us' },
+];
+---
+
+<nav class="fixed top-0 w-full z-50 bg-anime-dark/95 backdrop-blur-md border-b-4 border-anime-cyan shadow-[0_0_20px_rgba(0,245,255,0.25)]">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 group">
+      <span class="text-2xl md:text-3xl font-bangers text-anime-pink group-hover:text-anime-cyan transition-colors">
+        Shinobi SEO
+      </span>
+      <span class="text-sm text-anime-cyan font-noto hidden sm:inline">忍</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8">
+      {navItems.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class="text-white font-bold uppercase tracking-wider text-sm hover:text-anime-pink transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-anime-cyan hover:after:w-full after:transition-all after:duration-300"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <a
+      href="/contact"
+      class="hidden md:inline-block px-5 py-2 bg-anime-pink text-white font-bangers text-lg rounded-lg border-2 border-black shadow-[3px_3px_0_#00F5FF] hover:shadow-[1px_1px_0_#00F5FF] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+    >
+      Start Quest
+    </a>
+
+    <!-- Simple mobile menu toggle (CSS only expandable) -->
+    <details class="md:hidden relative">
+      <summary class="list-none cursor-pointer text-anime-cyan text-2xl p-1">☰</summary>
+      <ul class="absolute right-0 mt-2 w-48 bg-anime-panel border-4 border-black rounded-xl shadow-[6px_6px_0_#FF2D55] py-3 z-50">
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="block px-4 py-2 text-white font-bold hover:bg-anime-cyan/20 hover:text-anime-cyan"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+        <li class="border-t border-gray-700 mt-2 pt-2">
+          <a
+            href="/contact"
+            class="block px-4 py-2 text-anime-pink font-bangers text-lg"
+          >
+            Start Quest
+          </a>
+        </li>
+      </ul>
+    </details>
+  </div>
+</nav>

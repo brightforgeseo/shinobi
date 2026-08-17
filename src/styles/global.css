@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-anime-pink: #FF2D55;
+  --color-anime-cyan: #00F5FF;
+  --color-anime-purple: #7C3AED;
+  --color-anime-yellow: #FFE600;
+  --color-anime-dark: #0B0B14;
+  --color-anime-panel: #151528;
+  --color-anime-light: #F0F0FF;
+
+  --font-bangers: "Bangers", system-ui, sans-serif;
+  --font-noto: "Noto Sans JP", system-ui, sans-serif;
+  --font-inter: "Inter", system-ui, sans-serif;
+}
+
+/* Utility classes for fonts */
+.font-bangers {
+  font-family: var(--font-bangers);
+}
+
+.font-noto {
+  font-family: var(--font-noto);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+/* Manga speed lines utility */
+.speed-lines {
+  background-image:
+    repeating-linear-gradient(
+      -25deg,
+      transparent,
+      transparent 40px,
+      rgba(0, 245, 255, 0.07) 40px,
+      rgba(0, 245, 255, 0.07) 42px
+    ),
+    repeating-linear-gradient(
+      25deg,
+      transparent,
+      transparent 40px,
+      rgba(255, 45, 85, 0.05) 40px,
+      rgba(255, 45, 85, 0.05) 42px
+    );
+}
+
+/* Smooth base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 3px solid var(--color-anime-cyan);
+  outline-offset: 2px;
+}

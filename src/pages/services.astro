@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+
+const services = [
+  {
+    title: 'Keyword Research',
+    mangaName: 'Scouting Jutsu',
+    description:
+      'We uncover high-intent, high-opportunity keywords your competitors have not yet claimed. Using advanced tools and search intent analysis, we build a prioritized roadmap that fuels content and ranking strategy for months ahead.',
+    icon: '🔍',
+  },
+  {
+    title: 'On-Page SEO',
+    mangaName: 'Page Power Form',
+    description:
+      'Every title, heading, image, and internal link is optimized for both search engines and users. We balance keyword precision with readability and conversion so pages rank and convert.',
+    icon: '📄',
+  },
+  {
+    title: 'Technical SEO',
+    mangaName: 'Code Ninjutsu',
+    description:
+      'Site speed, crawlability, indexation, Core Web Vitals, structured data, and architecture. We remove technical barriers so Google can fully understand and reward your content.',
+    icon: '⚙️',
+  },
+  {
+    title: 'Link Building',
+    mangaName: 'Alliance Forging',
+    description:
+      'Quality over quantity. We earn authoritative, relevant backlinks through digital PR, strategic outreach, and content-led campaigns that strengthen domain authority and rankings.',
+    icon: '🔗',
+  },
+  {
+    title: 'Content Strategy',
+    mangaName: 'Story Arc Mastery',
+    description:
+      'We plan and produce content that builds topical authority. Pillar pages, supporting clusters, and editorial calendars designed to capture search demand and keep users engaged.',
+    icon: '✍️',
+  },
+  {
+    title: 'SEO Audits',
+    mangaName: 'Full Status Scan',
+    description:
+      'Comprehensive technical, on-page, and competitive audits. You receive a clear, prioritized action plan with exact steps to improve rankings and traffic.',
+    icon: '📊',
+  },
+];
+---
+
+<Layout
+  title="Our Signature Techniques | Shinobi SEO"
+  description="Scouting Jutsu, Code Ninjutsu, Alliance Forging and more. Discover the powerful SEO techniques that push brands to the top of Google."
+>
+  <section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="font-bangers text-5xl md:text-6xl mb-4">
+          Our Signature <span class="text-anime-cyan">Techniques</span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Precision. Power. Results. Master these techniques with the Shinobi team.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        {services.map((service) => <ServiceCard {...service} />)}
+      </div>
+
+      <div class="text-center">
+        <a
+          href="/contact"
+          class="inline-block px-10 py-5 bg-anime-pink text-white font-bangers text-2xl rounded-xl border-4 border-black shadow-[6px_6px_0_#00F5FF] hover:shadow-[3px_3px_0_#00F5FF] hover:translate-x-1 hover:translate-y-1 transition-all"
+        >
+          Begin Your Training
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

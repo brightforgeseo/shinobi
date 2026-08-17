@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  mangaName: string;
+  description: string;
+  icon?: string;
+}
+
+const { title, mangaName, description, icon = '⚡' } = Astro.props;
+---
+
+<article
+  class="group relative bg-anime-panel border-4 border-black rounded-xl p-6 shadow-[8px_8px_0_#FF2D55] hover:shadow-[8px_8px_0_#00F5FF] hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+>
+  <!-- Hover speed-line accent -->
+  <div
+    class="absolute inset-0 opacity-0 group-hover:opacity-15 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#00F5FF_10px,#00F5FF_12px)] transition-opacity duration-300 pointer-events-none"
+  ></div>
+
+  <div class="relative z-10">
+    <div class="text-4xl mb-3" aria-hidden="true">{icon}</div>
+    <h3 class="font-bangers text-2xl text-anime-cyan mb-1">{mangaName}</h3>
+    <p class="text-xs text-anime-pink font-bold uppercase tracking-widest mb-3">
+      {title}
+    </p>
+    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+      {description}
+    </p>
+    <a
+      href="/services"
+      class="inline-block text-anime-yellow font-bold text-sm hover:underline underline-offset-4"
+    >
+      Learn Technique →
+    </a>
+  </div>
+</article>
