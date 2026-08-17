@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+.idea/
+artifacts/
+screenshots/
+.grok/
+.vercel/
+attachments/
+src/assets/video/hero-cinematic.mp4
+src/assets/video/hero-panel.mp4
+public/video/hero-cinematic.mp4

@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0c0c10;
+  --color-ink-soft: #1c1c24;
+  --color-paper: #fff6e8;
+  --color-paper-2: #f3e6d0;
+  --color-paper-3: #e5d4b4;
+  --color-panel: #fffdf8;
+  --color-manga-red: #ee2430;
+  --color-manga-red-deep: #c01520;
+  --color-manga-cyan: #14c4d6;
+  --color-cinnabar: #ee2430;
+  --color-cinnabar-deep: #c01520;
+  --color-muted: #5c564c;
+  --color-faint: #8a8274;
+  --color-rule: #1a1a1a;
+
+  --font-display: "Dela Gothic One", "Noto Sans JP", system-ui, sans-serif;
+  --font-sans: "Noto Sans JP", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.2rem;
+  --radius-md: 0.35rem;
+  --radius-lg: 0.7rem;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      color-mix(in oklab, var(--color-ink) 9%, transparent) 1px,
+      transparent 0
+    );
+    background-size: 7px 7px;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2 {
+    text-wrap: balance;
+  }
+
+  h3,
+  h4 {
+    text-wrap: pretty;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-manga-red);
+    color: var(--color-paper);
+  }
+}
+
+@layer components {
+  .manga-panel {
+    background: var(--color-panel);
+    border: 3px solid var(--color-ink);
+    box-shadow: 6px 6px 0 var(--color-ink);
+  }
+
+  .manga-panel-red {
+    background: var(--color-panel);
+    border: 3px solid var(--color-ink);
+    box-shadow: 6px 6px 0 var(--color-manga-red);
+  }
+
+  .manga-panel-cyan {
+    background: var(--color-panel);
+    border: 3px solid var(--color-ink);
+    box-shadow: 6px 6px 0 var(--color-manga-cyan);
+  }
+
+  .speed-lines {
+    background-image: repeating-linear-gradient(
+      -18deg,
+      transparent,
+      transparent 14px,
+      rgba(12, 12, 16, 0.45) 14px,
+      rgba(12, 12, 16, 0.45) 15px
+    );
+  }
+
+  .chapter-stamp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 4.5rem;
+    padding: 0.2rem 0.55rem;
+    border: 2px solid var(--color-manga-red);
+    color: var(--color-manga-red);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
