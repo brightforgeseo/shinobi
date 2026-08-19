@@ -52,7 +52,7 @@ function SpeechBubble({
 function Hero() {
   return (
     <section className="relative overflow-hidden border-b-[3px] border-ink">
-      <div className="relative h-[calc(100svh-4.25rem-3px)] min-h-[30rem] max-h-[52rem] w-full">
+      <div className="relative h-[calc(100svh-5.25rem-3px)] min-h-[30rem] max-h-[52rem] w-full">
         <video
           className="absolute inset-0 h-full w-full bg-ink object-cover object-[32%_16%] sm:object-[40%_14%] lg:object-[45%_12%]"
           poster={media.heroPoster}
@@ -121,7 +121,7 @@ function Hero() {
               <div className="mt-5 grid max-w-md grid-cols-3 gap-2 sm:mt-10 sm:gap-3">
                 {[
                   { k: "Experience", v: `${site.experience} yrs` },
-                  { k: "Focus", v: "Leads" },
+                  { k: "Parent cases", v: site.publishedCases },
                   { k: "Style", v: "SEO + CRO" },
                 ].map((s) => (
                   <div
@@ -342,6 +342,16 @@ function CasesBlock() {
           Proof that moves
           <span className="text-manga-red"> more than rankings.</span>
         </h2>
+        <p className="mt-3 max-w-2xl text-sm text-muted">
+          These numbers come from{" "}
+          <a
+            href={site.parentUrl}
+            className="underline underline-offset-4 hover:text-manga-red"
+          >
+            {site.parentName}
+          </a>
+          , our parent company. Same dojo. Same evidence bar.
+        </p>
         <div className="mt-8 grid gap-5 lg:grid-cols-12">
           <Link
             to="/cases"
@@ -351,7 +361,7 @@ function CasesBlock() {
             <FrameImg src={lead.image} alt="" className="aspect-[16/10] w-full" />
             <div className="border-t-[3px] border-ink p-5">
               <p className="text-[0.7rem] uppercase tracking-wider text-muted">
-                {lead.sector} · {lead.year}
+                {lead.sector} · {lead.year} · Parent company
               </p>
               <h3 className="mt-1 font-display text-2xl group-hover:text-manga-red">
                 {lead.client}
