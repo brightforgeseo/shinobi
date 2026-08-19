@@ -38,11 +38,12 @@ export function MegaNav() {
       onMouseLeave={() => setPanel(null)}
     >
       <div className="mx-auto flex h-[4.25rem] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link to="/" className="flex shrink-0 items-center gap-2">
-          <span className="inline-flex size-9 items-center justify-center border-[3px] border-ink bg-manga-red font-display text-sm text-paper">
-            忍
-          </span>
-          <span className="font-display text-xl leading-none">SHINOBI</span>
+        <Link to="/" className="flex shrink-0 items-center">
+          <img
+            src="/logo.png"
+            alt="Shinobi"
+            className="h-10 w-auto sm:h-12"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
