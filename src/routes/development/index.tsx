@@ -12,11 +12,11 @@ export const Route = createFileRoute("/development/")({
   component: Page,
   head: () => ({
     meta: [
-      { title: "SEO-First Web Development — Shinobi" },
+      { title: "SEO-First Web Development Philippines | Shinobi" },
       {
         name: "description",
         content:
-          "Web development that protects rankings, performance and conversion paths from the start. Astro, SvelteKit, Next.js, React and WordPress.",
+          "SEO-first web development from Shinobi in Quezon City. Astro, SvelteKit, Next.js, React and WordPress. A studio of Bright Forge SEO.",
       },
     ],
   }),
@@ -36,8 +36,8 @@ function Page() {
         red="FROM THE START."
       >
         A good website build should not make SEO harder. We plan structure,
-        speed, content, redirects, schema and tracking before launch so the site
-        is ready to earn visibility — not just look finished.
+        speed, content, redirects, schema and tracking before launch. Quezon
+        City dojo. A studio of Bright Forge SEO.
       </PageHero>
 
       <section className="border-b-[3px] border-ink bg-paper-2/40">

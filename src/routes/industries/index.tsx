@@ -11,11 +11,11 @@ export const Route = createFileRoute("/industries/")({
   component: Page,
   head: () => ({
     meta: [
-      { title: "Industries — Shinobi" },
+      { title: "Industries | SEO Agency Philippines — Shinobi" },
       {
         name: "description",
         content:
-          "Finance & crypto, real estate, home services, pet services, gaming and football SEO. Intent first. Commercial pages first.",
+          "Industry SEO in the Philippines and abroad: finance, real estate, home services, pet services, gaming and football. A studio of Bright Forge SEO.",
       },
     ],
   }),
@@ -33,8 +33,9 @@ function Page() {
         title="BATTLEFIELDS"
         red="WE ALREADY READ."
       >
-        Not a generic playbook copied across categories. Intent before content.
-        Commercial pages first. Measured next steps.
+        Not a generic playbook copied across categories. Philippine search
+        habits first, then UK, US and AU. Intent before content. Commercial
+        pages first.
       </PageHero>
 
       <section className="border-b-[3px] border-ink bg-paper-2/40">

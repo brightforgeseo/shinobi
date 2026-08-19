@@ -9,11 +9,11 @@ export const Route = createFileRoute("/command-centre")({
   component: Page,
   head: () => ({
     meta: [
-      { title: "SEO Command Centre — Shinobi" },
+      { title: "SEO Command Centre Philippines | Shinobi" },
       {
         name: "description",
         content:
-          "An AI-assisted operating layer for SEO campaigns. Monitoring, opportunity detection, delivery QA, reporting intelligence and approval-gated operations.",
+          "Shinobi Command Centre: monitoring, QA, reporting and approval-gated SEO ops. A Bright Forge SEO operating layer for Philippine and international campaigns.",
       },
     ],
   }),
@@ -31,7 +31,8 @@ function Page() {
       >
         Most campaigns fail because signals are missed, reports disconnect from
         action, and tasks get marked done without proof. The Command Centre is
-        an operating layer — not a dashboard export.
+        the Bright Forge operating layer wearing Shinobi armour. Not a dashboard
+        export.
       </PageHero>
 
       <section className="border-b-[3px] border-ink">

@@ -10,11 +10,11 @@ export const Route = createFileRoute("/seo-services/")({
   component: Page,
   head: () => ({
     meta: [
-      { title: "SEO Services — Shinobi" },
+      { title: "SEO Services Philippines | Shinobi by Bright Forge" },
       {
         name: "description",
         content:
-          "Technical SEO, on-page, content, local, audits, keyword research, link building, AI search, migrations and white label. Rankings, leads and commercial growth.",
+          "SEO services in the Philippines: technical SEO, on-page, content, local SEO, audits, keywords, links, AI search, migrations and white label. A Bright Forge SEO studio.",
       },
     ],
   }),
@@ -32,9 +32,9 @@ function Page() {
         title="RANKINGS, LEADS"
         red="AND GROWTH."
       >
-        We combine technical SEO, content strategy, local search, authority
-        building and conversion-focused page work so organic visibility attracts
-        people who are ready to act.
+        SEO services in the Philippines from a Quezon City dojo. Technical SEO,
+        content, local search, authority and conversion. Shinobi is a studio of
+        Bright Forge SEO.
       </PageHero>
 
       <section className="border-b-[3px] border-ink">

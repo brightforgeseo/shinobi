@@ -9,7 +9,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { Toaster } from "sonner";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Shinobi — Independent search studio";
+const APP_NAME = "Shinobi | SEO Agency Philippines";
 const host = import.meta.env.VITE_PUBLIC_HOSTNAME;
 const ogImage = host ? `https://${host}/og.jpg` : undefined;
 
@@ -22,7 +22,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Shinobi is an independent SEO studio. We diagnose, rebuild, and grow organic systems for companies that have outgrown agency theatre.",
+          "Shinobi is a Quezon City SEO agency and a studio of Bright Forge SEO. SEO services in the Philippines, plus UK, US and AU.",
       },
       { name: "apple-mobile-web-app-title", content: "Shinobi" },
       { name: "theme-color", content: "#fff6e8" },
@@ -32,7 +32,7 @@ export const Route = createRootRoute({
       {
         property: "og:description",
         content:
-          "An independent search studio. Diagnosis first. Fewer pages. Better ones.",
+          "Quezon City SEO dojo. A studio of Bright Forge SEO. Diagnosis first. Fewer pages. Better ones.",
       },
       ...(ogImage
         ? [

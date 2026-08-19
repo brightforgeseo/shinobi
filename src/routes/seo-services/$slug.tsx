@@ -14,7 +14,7 @@ export const Route = createFileRoute("/seo-services/$slug")({
   component: Page,
   head: ({ loaderData }) => ({
     meta: [
-      { title: `${loaderData?.name ?? "Service"} — Shinobi` },
+      { title: `${loaderData?.name ?? "SEO"} Philippines | Shinobi` },
       { name: "description", content: loaderData?.intro ?? loaderData?.lede ?? "" },
     ],
   }),

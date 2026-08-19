@@ -9,10 +9,11 @@ export const Route = createFileRoute("/blog/")({
   component: Page,
   head: () => ({
     meta: [
-      { title: "Field Notes — Shinobi" },
+      { title: "Field Notes | Shinobi SEO Philippines" },
       {
         name: "description",
-        content: "Notes from the dojo: audits, timelines, local SEO and AI search.",
+        content:
+          "Notes from the Quezon City dojo: audits, timelines, local SEO in the Philippines and AI search. A Bright Forge SEO studio.",
       },
     ],
   }),
@@ -28,7 +29,7 @@ function Page() {
         title="THINGS WE KEEP"
         red="WRITING DOWN."
       >
-        Short, useful notes. Not a content mill.
+        Short notes from the Quezon City dojo. Not a content mill.
       </PageHero>
       <section>
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-12">

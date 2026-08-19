@@ -12,11 +12,11 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Request an SEO Review — Shinobi" },
+      { title: "Contact Shinobi | SEO Agency Philippines" },
       {
         name: "description",
         content:
-          "Tell us what you want SEO to fix. We review the obvious signals and reply within one business day.",
+          "Request an SEO review from Shinobi in Quezon City. A studio of Bright Forge SEO. Philippines, UK, US and AU.",
       },
     ],
   }),
@@ -46,10 +46,15 @@ function ContactPage() {
               <span className="block text-manga-red">REVIEW.</span>
             </h1>
             <p className="mt-5 max-w-md text-muted">
-              Tell us what you want SEO to fix: rankings, enquiries, technical
-              issues, AI search visibility, weak service pages, a messy
-              migration, or traffic that is not turning into leads. If more SEO
-              is not the answer yet, we will say so.
+              Quezon City dojo. SEO agency in the Philippines, and a studio of{" "}
+              <a
+                href={site.parentUrl}
+                className="text-ink underline underline-offset-4 hover:text-manga-red"
+              >
+                {site.parentName}
+              </a>
+              . Send the site, the city and what is stuck. If more SEO is not the
+              answer yet, we say so.
             </p>
             <dl className="mt-10 space-y-4 border-t-[3px] border-ink pt-8 text-sm">
               <div>

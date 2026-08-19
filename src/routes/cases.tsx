@@ -10,11 +10,11 @@ export const Route = createFileRoute("/cases")({
   component: Page,
   head: () => ({
     meta: [
-      { title: "Case Studies — Shinobi" },
+      { title: "SEO Case Studies Philippines | Shinobi" },
       {
         name: "description",
         content:
-          "Proof that SEO work can move more than rankings: traffic, clicks, CTR and AI-search sessions.",
+          "Shinobi SEO case studies: traffic, clicks, CTR and AI-search sessions for Philippine and international brands. A studio of Bright Forge SEO.",
       },
     ],
   }),
@@ -30,8 +30,9 @@ function Page() {
         title="PROOF THAT MOVES"
         red="MORE THAN RANKINGS."
       >
-        Visibility, clicks, traffic and conversion opportunities improving over
-        time. Names used with permission or described by sector.
+        Visibility, clicks, traffic and conversion opportunities. Philippine and
+        international work. Names used with permission or described by sector.
+        Parent company: Bright Forge SEO.
       </PageHero>
 
       {cases.map((c, i) => (

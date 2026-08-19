@@ -15,7 +15,7 @@ export const Route = createFileRoute("/development/$slug")({
   component: Page,
   head: ({ loaderData }) => ({
     meta: [
-      { title: `${loaderData?.name ?? "Development"} — Shinobi` },
+      { title: `${loaderData?.name ?? "Development"} Philippines | Shinobi` },
       { name: "description", content: loaderData?.intro ?? loaderData?.lede ?? "" },
     ],
   }),

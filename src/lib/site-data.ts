@@ -59,7 +59,7 @@ export const services = [
     index: "04",
     name: "Local SEO",
     mangaName: "Territory Seal",
-    lede: "Google Business Profile, local landing pages, citations, reviews and service-area relevance. Dominate the map pack and local organic.",
+    lede: "Google Business Profile, local landing pages, citations, reviews and service-area relevance for SEO in the Philippines. Dominate the map pack and local organic.",
     body: "Local businesses need the phone to ring from people nearby. We strengthen GBP, location pages and trust signals without turning the brand into a directory.",
     outcomes: ["GBP systems", "Location pages", "Review operations"],
   },
@@ -375,7 +375,7 @@ export const nextSteps = [
 export const whoWeHelp = [
   {
     name: "Philippine businesses",
-    text: "Local and national brands that need the phone to ring — service pages, GBP and commercial keywords.",
+    text: "Local and national brands that need the phone to ring. Service pages, GBP and commercial keywords for Manila, Cebu, Davao and nationwide.",
   },
   {
     name: "International companies",
@@ -505,8 +505,8 @@ export const notes = [
     title: "Local SEO when the phone has to ring",
     date: "Oct 2025",
     excerpt:
-      "GBP, service-area pages, reviews and a page that makes the next step obvious. That is the whole plot.",
-    body: "Small service businesses do not need a blog calendar. They need to win the searches people type when something is broken, then convert the visit. Map pack, location pages, proof, tracking.",
+      "GBP, service-area pages, reviews and a page that makes the next step obvious. Manila, Cebu, Davao, then the rest of the map.",
+    body: "Small service businesses in the Philippines do not need a blog calendar. They need to win the searches people type when something is broken, then convert the visit. Map pack, location pages, proof, tracking. Same method Bright Forge uses on parent-company work.",
   },
 ];
 
