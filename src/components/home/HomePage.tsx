@@ -52,7 +52,7 @@ function SpeechBubble({
 function Hero() {
   return (
     <section className="relative overflow-hidden border-b-[3px] border-ink">
-      <div className="relative h-[calc(100svh-8.25rem-3px)] min-h-[30rem] max-h-[52rem] w-full">
+      <div className="relative h-[calc(100svh-7.5rem-3px)] min-h-[30rem] max-h-[52rem] w-full">
         <video
           className="absolute inset-0 h-full w-full bg-ink object-cover object-[32%_16%] sm:object-[40%_14%] lg:object-[45%_12%]"
           poster={media.heroPoster}
