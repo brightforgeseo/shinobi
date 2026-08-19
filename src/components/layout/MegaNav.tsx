@@ -37,18 +37,15 @@ export function MegaNav() {
       className="sticky top-0 z-50 border-b-[3px] border-ink bg-paper/95"
       onMouseLeave={() => setPanel(null)}
     >
-      <div className="mx-auto flex h-[5.25rem] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link to="/" className="flex shrink-0 flex-col justify-center leading-none">
+      <div className="mx-auto flex h-[8.25rem] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
+        <Link to="/" className="flex h-full shrink-0 items-center py-2">
           <img
-            src="/logo-word.png"
-            alt="Shinobi"
-            width={900}
-            height={268}
-            className="block h-11 w-auto object-contain object-left sm:h-12"
+            src="/og.jpg"
+            alt="Shinobi Search Dojo"
+            width={1200}
+            height={630}
+            className="block h-[7.25rem] w-auto max-h-full object-contain object-left"
           />
-          <span className="mt-1 font-display text-[0.68rem] tracking-[0.32em] text-ink sm:text-[0.75rem] sm:tracking-[0.36em]">
-            SEARCH DOJO
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
