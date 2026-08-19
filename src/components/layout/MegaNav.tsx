@@ -34,17 +34,17 @@ export function MegaNav() {
 
   return (
     <header
-      className="sticky top-0 z-50 border-b-[3px] border-ink bg-paper/95"
+      className="sticky top-0 z-50 overflow-visible border-b-[3px] border-ink bg-paper/95"
       onMouseLeave={() => setPanel(null)}
     >
-      <div className="mx-auto flex h-[7.5rem] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link to="/" className="flex h-full shrink-0 items-center py-2">
+      <div className="mx-auto flex h-[8.25rem] max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
+        <Link to="/" className="flex h-full shrink-0 items-center overflow-visible py-1">
           <img
             src="/logo-lockup.png"
             alt="Shinobi Search Dojo"
-            width={990}
-            height={500}
-            className="block h-[6.5rem] w-auto max-h-full object-contain object-left"
+            width={1280}
+            height={512}
+            className="block h-[7.25rem] w-auto max-w-none object-contain object-left"
           />
         </Link>
 
