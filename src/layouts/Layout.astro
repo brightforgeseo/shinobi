@@ -3,34 +3,66 @@ import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
+interface FaqItem {
+  q: string;
+  a: string;
+}
+
 interface Props {
   title?: string;
   description?: string;
   image?: string;
   canonical?: string;
+  faqs?: FaqItem[];
 }
 
 const {
-  title = 'Shinobi SEO | Master the Art of Rankings',
-  description = 'Dominate the SERPs with elite SEO techniques forged in the digital dojo. Keyword research, technical SEO, link building & more. Turn your site into a ranking legend.',
+  title = 'SEO Agency Philippines | Shinobi SEO by Bright Forge',
+  description = 'Shinobi SEO is a Quezon City SEO agency offering SEO services in the Philippines. A studio of Bright Forge SEO.',
   image = '/og-default.jpg',
   canonical = Astro.url.href,
+  faqs = [],
 } = Astro.props;
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Shinobi SEO',
-  url: 'https://shinobiseo.com',
-  logo: 'https://shinobiseo.com/logo.png',
-  description:
-    'Expert SEO agency helping businesses dominate Google rankings with proven techniques.',
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'customer service',
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Shinobi SEO',
+    url: 'https://shinobiseo.com',
     email: 'hello@shinobiseo.com',
+    description:
+      'SEO agency in the Philippines offering local SEO, technical SEO and content. A studio of Bright Forge SEO.',
+    areaServed: ['Philippines', 'Metro Manila', 'Quezon City', 'Cebu', 'Davao'],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Quezon City',
+      addressRegion: 'Metro Manila',
+      addressCountry: 'PH',
+    },
+    parentOrganization: {
+      '@type': 'Organization',
+      name: 'Bright Forge SEO',
+      url: 'https://brightforgeseo.com',
+    },
   },
-};
+  ...(faqs.length
+    ? [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((item) => ({
+            '@type': 'Question',
+            name: item.q,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: item.a,
+            },
+          })),
+        },
+      ]
+    : []),
+];
 ---
 
 <!doctype html>
@@ -42,7 +74,6 @@ const jsonLd = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -50,14 +81,12 @@ const jsonLd = {
       rel="stylesheet"
     />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />

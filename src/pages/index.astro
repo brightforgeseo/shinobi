@@ -2,69 +2,87 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
-import SpeechBubble from '../components/SpeechBubble.astro';
 
 const services = [
   {
     title: 'Keyword Research',
     mangaName: 'Scouting Jutsu',
     description:
-      'Discover high-value targets before your competitors even sense them. Data-driven keyword strategies that fuel sustainable growth.',
+      'Philippines search intent first. We map what buyers in Manila, Cebu and Davao actually type, then pick missions worth ranking for.',
     icon: '🔍',
   },
   {
     title: 'On-Page SEO',
     mangaName: 'Page Power Form',
     description:
-      'Optimize every element on the page for maximum ranking power and exceptional user experience.',
+      'Titles, headings, internal links and commercial pages written so Google and a Filipino buyer both understand the offer.',
     icon: '📄',
   },
   {
     title: 'Technical SEO',
     mangaName: 'Code Ninjutsu',
     description:
-      'Fix the foundation. Lightning-fast sites, perfect crawlability, and rock-solid technical health.',
+      'Crawl, index, speed and Core Web Vitals. We fix the foundation so content can rank on mobile-first Philippine search.',
     icon: '⚙️',
   },
   {
-    title: 'Link Building',
-    mangaName: 'Alliance Forging',
+    title: 'Local SEO Philippines',
+    mangaName: 'Territory Domination',
     description:
-      'Build authoritative connections across the web. Quality backlinks that signal strength to search engines.',
-    icon: '🔗',
+      'Google Business Profile, Maps, city pages and review proof for shops and service brands that need local leads, not vanity traffic.',
+    icon: '🗺️',
   },
   {
     title: 'Content Strategy',
     mangaName: 'Story Arc Mastery',
     description:
-      'Craft compelling content that ranks and converts. From pillar pages to complete content calendars.',
+      'Source-locked articles and service pages with a human voice. No stuffed blogs. Pages that answer the job and earn the click.',
     icon: '✍️',
   },
   {
     title: 'SEO Audits',
     mangaName: 'Full Status Scan',
     description:
-      'Deep diagnostic of your site’s ranking potential. Clear, actionable roadmap to victory.',
+      'Live-page inspection before advice. You get a ranked action plan: what is broken, what is redundant, what to do next.',
     icon: '📊',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Is Shinobi SEO an SEO agency in the Philippines?',
+    a: 'Yes. We operate from Quezon City and take missions for Metro Manila, Cebu, Davao and nationwide brands. Shinobi SEO is a studio of Bright Forge SEO, our parent company.',
+  },
+  {
+    q: 'What SEO services in the Philippines do you run?',
+    a: 'Keyword research, on-page SEO, technical SEO, local SEO and Google Business Profile work, content, audits and reporting. We do not sell fake backlink packs.',
+  },
+  {
+    q: 'How is Shinobi different from other SEO companies in the Philippines?',
+    a: 'The theme is shinobi. The work is Bright Forge method: live evidence, specialist content and technical lanes, and nothing marked done without proof.',
+  },
+  {
+    q: 'Do you only work with local businesses?',
+    a: 'No. Local SEO is a core technique for Philippine storefronts and service areas. We also run national and export-facing SEO when the offer is real.',
   },
 ];
 ---
 
 <Layout
-  title="Shinobi SEO | Master the Art of Rankings"
-  description="Dominate the SERPs with elite SEO techniques forged in the digital dojo. We turn ordinary sites into ranking legends."
+  title="SEO Agency Philippines | Shinobi SEO by Bright Forge"
+  description="Shinobi SEO is a Quezon City SEO agency for SEO services in the Philippines. Local SEO, technical SEO and content, built as a studio of Bright Forge SEO."
+  faqs={faqs}
 >
   <Hero />
 
-  <!-- Signature Techniques -->
   <section class="py-20 px-4" id="techniques">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
         <h2 class="font-bangers text-4xl md:text-5xl mb-3">
-          Our Signature <span class="text-anime-cyan">Techniques</span>
+          Signature <span class="text-anime-cyan">Techniques</span>
         </h2>
         <p class="text-gray-400 max-w-2xl mx-auto">
-          Precision. Power. Results. Choose your path to ranking mastery.
+          SEO services Philippines brands actually need: search demand, clean pages, local maps, and proof before the next move.
         </p>
       </div>
 
@@ -74,34 +92,99 @@ const services = [
     </div>
   </section>
 
-  <!-- Testimonials -->
   <section class="py-20 px-4 bg-anime-panel/60">
     <div class="max-w-5xl mx-auto">
-      <h2 class="font-bangers text-4xl md:text-5xl text-center mb-14">
-        What Clients <span class="text-anime-pink">Say</span>
+      <h2 class="font-bangers text-4xl md:text-5xl text-center mb-6">
+        Built for <span class="text-anime-pink">Philippine</span> search
       </h2>
-
-      <div class="grid md:grid-cols-2 gap-12">
-        <SpeechBubble
-          text="Shinobi SEO didn’t just improve our rankings — they transformed our entire growth engine. Absolute masters of the craft!"
-          author="Alex, SaaS Founder"
-        />
-        <SpeechBubble
-          text="From page 5 to position #1 in four months. Their techniques are genuinely next level. Highly recommended."
-          author="Jordan, E-commerce Lead"
-          position="right"
-        />
+      <p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-3xl mx-auto text-center">
+        Most SEO company Philippines pages talk about growth. We talk about the job: rank for the service a buyer in QC, Makati, Cebu or Davao is ready to hire.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-anime-panel border-4 border-black rounded-xl p-6 shadow-[5px_5px_0_#00F5FF]">
+          <h3 class="font-bangers text-2xl text-anime-cyan mb-2">Local leads</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Maps, GBP categories, city language and service-area pages. Useful when the phone should ring in the same city the search happened.
+          </p>
+        </article>
+        <article class="bg-anime-panel border-4 border-black rounded-xl p-6 shadow-[5px_5px_0_#FF2D55]">
+          <h3 class="font-bangers text-2xl text-anime-pink mb-2">National offers</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Ecommerce, B2B and multi-branch brands that need more than one city. We still write for Filipino search habits, not US template keywords.
+          </p>
+        </article>
+        <article class="bg-anime-panel border-4 border-black rounded-xl p-6 shadow-[5px_5px_0_#FFE600]">
+          <h3 class="font-bangers text-2xl text-anime-yellow mb-2">Evidence first</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Live page checks before on-page advice. Missing H1s get judged for redundancy, not auto-filled. Done means verified, not hoped.
+          </p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Final CTA -->
+  <section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-bangers text-4xl md:text-5xl text-center mb-10">
+        How a <span class="text-anime-cyan">mission</span> runs
+      </h2>
+      <ol class="space-y-6 text-gray-300">
+        <li class="bg-anime-panel border-4 border-black rounded-xl p-6">
+          <p class="font-bangers text-xl text-anime-pink mb-2">1. Scout</p>
+          <p>We open the live site, Search Console where we have access, and the real commercial pages. No URL-only guesses.</p>
+        </li>
+        <li class="bg-anime-panel border-4 border-black rounded-xl p-6">
+          <p class="font-bangers text-xl text-anime-cyan mb-2">2. Train</p>
+          <p>Content, technical and local work run as separate lanes. Writers do not QA their own pages. Uploads wait for links, meta and proof.</p>
+        </li>
+        <li class="bg-anime-panel border-4 border-black rounded-xl p-6">
+          <p class="font-bangers text-xl text-anime-yellow mb-2">3. Report</p>
+          <p>You see what moved, what is blocked, and what the next mission is. Parent-company reporting standards come from Bright Forge.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 bg-anime-panel/60">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-bangers text-4xl md:text-5xl mb-6">
+        A studio of <span class="text-anime-pink">Bright Forge</span>
+      </h2>
+      <p class="text-gray-300 text-lg leading-relaxed mb-8">
+        Shinobi SEO is the themed front for serious SEO work. Bright Forge SEO is the parent company: Quezon City based, built for search that creates leads.
+        Same squad discipline. Different armour.
+      </p>
+      <a
+        href="https://brightforgeseo.com"
+        class="inline-block px-8 py-4 bg-transparent text-anime-cyan font-bangers text-xl rounded-xl border-4 border-anime-cyan hover:bg-anime-cyan hover:text-anime-dark transition-all"
+      >
+        Visit Bright Forge SEO
+      </a>
+    </div>
+  </section>
+
+  <section class="py-20 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-bangers text-4xl md:text-5xl text-center mb-10">
+        FAQ from the <span class="text-anime-cyan">dojo</span>
+      </h2>
+      <div class="space-y-4">
+        {faqs.map((item) => (
+          <details class="bg-anime-panel border-4 border-black rounded-xl p-5">
+            <summary class="font-bold text-white cursor-pointer">{item.q}</summary>
+            <p class="mt-3 text-gray-300 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <section class="py-24 px-4 text-center">
     <h2 class="font-bangers text-4xl md:text-6xl mb-6">
-      Ready to <span class="text-anime-pink">Dominate</span>?
+      Ready to <span class="text-anime-pink">rank in PH</span>?
     </h2>
     <p class="text-xl text-gray-300 mb-10 max-w-xl mx-auto">
-      Summon the Shinobi team and begin your ranking journey today.
+      Tell us the city, the offer, and the site. We will tell you if a mission is worth opening.
     </p>
     <a
       href="/contact"
