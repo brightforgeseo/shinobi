@@ -99,7 +99,7 @@ export const industryPages: IndustryPage[] = [
     h1: "CREDIBILITY",
     red: "BEFORE SCALE.",
     intro:
-      "SEO for high-trust finance and crypto businesses where credibility matters as much as traffic. Searchers compare risk, regulation, platform credibility, costs, security and evidence before they act. Thin content or hype-led pages can do more harm than good. We work this market in the Philippines and for international brands, as a studio of Bright Forge SEO.",,
+      "SEO for high-trust finance and crypto businesses where credibility matters as much as traffic. Searchers compare risk, regulation, platform credibility, costs, security and evidence before they act. Thin content or hype-led pages can do more harm than good. We work this market in the Philippines and for international brands, as a studio of Bright Forge SEO.",
     whyTitle: "Finance and crypto pages live in a trust-sensitive SERP",
     why: "Thin claims, vague expertise and aggressive growth language can weaken the page before the technical work even starts. We focus on cautious claims, stronger expertise signals, cleaner technical foundations, content QA and page structures that support qualified demand without overpromising.",
     coverTitle: "What finance and crypto SEO should cover",
@@ -142,7 +142,7 @@ export const industryPages: IndustryPage[] = [
     h1: "LOCATIONS,",
     red: "LISTINGS, TRUST.",
     intro:
-      "SEO for property businesses where location, trust, listings and lead quality have to work together. Buyers and sellers compare locations, property types, agents, developments and advice before they ever make contact. We work this market in the Philippines and for international brands, as a studio of Bright Forge SEO.",,
+      "SEO for property businesses where location, trust, listings and lead quality have to work together. Buyers and sellers compare locations, property types, agents, developments and advice before they ever make contact. We work this market in the Philippines and for international brands, as a studio of Bright Forge SEO.",
     whyTitle: "Make locations, listings and trust easier to find",
     why: "Property searches are shaped by location, property type, buyer intent and proof. A campaign needs more than broad visibility claims if it is going to support enquiries. We focus on area pages, listing structure, agent or brand trust, internal linking, content quality and the signals that help searchers move from research to contact.",
     coverTitle: "What real estate SEO should cover",
@@ -185,7 +185,7 @@ export const industryPages: IndustryPage[] = [
     h1: "CALLS, TRUST,",
     red: "SERVICE AREA.",
     intro:
-      "SEO for trade and home service businesses where calls, trust and service-area coverage matter. Not just ranking a homepage . strong service pages, local signals, Google Business Profile, review proof and a site that makes it easy to enquire. We work this market in the Philippines and for international brands, as a studio of Bright Forge SEO.",,
+      "SEO for trade and home service businesses where calls, trust and service-area coverage matter. Not just ranking a homepage . strong service pages, local signals, Google Business Profile, review proof and a site that makes it easy to enquire. We work this market in the Philippines and for international brands, as a studio of Bright Forge SEO.",
     whyTitle: "Urgent buyers want to choose the right provider",
     why: "Home service searches are practical, local and often urgent. People want to know who serves their area, what the business does, whether they can trust it and how quickly they can get help. We focus on service pages, location signals, reviews, proof, technical basics and conversion paths that help local buyers move from the result to an enquiry.",
     coverTitle: "What home services SEO should cover",
@@ -228,7 +228,7 @@ export const industryPages: IndustryPage[] = [
     h1: "CARE, TRUST,",
     red: "LOCAL DEMAND.",
     intro:
-      "SEO for pet businesses where local trust, service clarity and helpful content drive real enquiries. Owners search with practical intent: vets near me, grooming prices, trainers, stores, symptoms, services and care questions. We work this market in the Philippines and for international brands, as a studio of Bright Forge SEO.",,
+      "SEO for pet businesses where local trust, service clarity and helpful content drive real enquiries. Owners search with practical intent: vets near me, grooming prices, trainers, stores, symptoms, services and care questions. We work this market in the Philippines and for international brands, as a studio of Bright Forge SEO.",
     whyTitle: "Pet SEO has to balance care, trust and local search demand",
     why: "Owners compare services, locations, reviews, care standards and practical advice before they book or buy. Visibility has to feel credible, not generic. We focus on service pages, local signals, review quality, useful content, technical health and conversion paths for clinics, groomers, trainers, stores and pet brands.",
     coverTitle: "What pet SEO should cover",
@@ -271,7 +271,7 @@ export const industryPages: IndustryPage[] = [
     h1: "PLAYERS, SIGNUPS.",
     red: "NOT HYPE.",
     intro:
-      "SEO for gaming brands that need players, signups and communities . not vanity traffic. Discovery, guides, app comparisons, community searches, reviews, updates and brand queries. Useful demand, without relying on hype. We work this market in the Philippines and for international brands, as a studio of Bright Forge SEO.",,
+      "SEO for gaming brands that need players, signups and communities . not vanity traffic. Discovery, guides, app comparisons, community searches, reviews, updates and brand queries. Useful demand, without relying on hype. We work this market in the Philippines and for international brands, as a studio of Bright Forge SEO.",
     whyTitle: "Connect search demand to players, signups and revenue",
     why: "Gaming search is messy. The work has to separate useful intent from hype before deciding which pages deserve attention. We focus on crawlable pages, stronger technical foundations, content that matches player intent and measurement that shows whether organic is helping acquisition.",
     coverTitle: "What gaming SEO should actually cover",
@@ -314,7 +314,7 @@ export const industryPages: IndustryPage[] = [
     h1: "FIXTURES, FANS,",
     red: "MEASURABLE DEMAND.",
     intro:
-      "SEO for football brands where fixtures, fans, players, clubs and timing shape search demand. Academies, player questions, club information, apps and fan content all create demand at different points in the season. SEO has to account for that movement. We work this market in the Philippines and for international brands, as a studio of Bright Forge SEO.",,
+      "SEO for football brands where fixtures, fans, players, clubs and timing shape search demand. Academies, player questions, club information, apps and fan content all create demand at different points in the season. SEO has to account for that movement. We work this market in the Philippines and for international brands, as a studio of Bright Forge SEO.",
     whyTitle: "Turn match-day and training demand into measurable discovery",
     why: "Football searches range from clubs, academies and coaching to fixtures, products, fan content and local programmes. The plan needs to understand those intents before recommending content or technical work. We focus on useful page structure, technical visibility, stronger trust signals and search paths that support users, players, fans, enquiries or ecommerce.",
     coverTitle: "What football SEO should cover",
