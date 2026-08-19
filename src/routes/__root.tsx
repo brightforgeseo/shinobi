@@ -10,8 +10,8 @@ import { Toaster } from "sonner";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "Shinobi | SEO Agency Philippines";
-const host = import.meta.env.VITE_PUBLIC_HOSTNAME;
-const ogImage = host ? `https://${host}/og.jpg` : undefined;
+const OG_IMAGE = "https://shinobiseo.netlify.app/og.jpg";
+const OG_URL = "https://shinobiseo.netlify.app/";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -27,20 +27,27 @@ export const Route = createRootRoute({
       { name: "apple-mobile-web-app-title", content: "Shinobi" },
       { name: "theme-color", content: "#fff6e8" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: APP_NAME },
+      {
+        name: "twitter:description",
+        content:
+          "Quezon City SEO dojo. A studio of Bright Forge SEO. Diagnosis first. Fewer pages. Better ones.",
+      },
+      { name: "twitter:image", content: OG_IMAGE },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: OG_URL },
       { property: "og:title", content: APP_NAME },
       {
         property: "og:description",
         content:
           "Quezon City SEO dojo. A studio of Bright Forge SEO. Diagnosis first. Fewer pages. Better ones.",
       },
-      ...(ogImage
-        ? [
-            { property: "og:image", content: ogImage },
-            { property: "og:image:width", content: "1200" },
-            { property: "og:image:height", content: "630" },
-          ]
-        : []),
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:secure_url", content: OG_IMAGE },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Shinobi Search Dojo" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
