@@ -9,6 +9,8 @@ export const site = {
   serving: "Philippines · UK · US · AU",
   established: "2019",
   experience: "15+",
+  parentName: "Bright Forge SEO",
+  parentUrl: "https://brightforgeseo.com",
 };
 
 export const nav = [
@@ -411,6 +413,10 @@ export const people = [
 ];
 
 export const faqs = [
+  {
+    q: "Is Shinobi part of Bright Forge SEO?",
+    a: "Yes. Shinobi is the themed SEO studio. Bright Forge SEO is the parent company. Same Quezon City dojo, same evidence rules, different armour.",
+  },
   {
     q: "What do businesses usually need first?",
     a: "Most campaigns start with technical SEO, keyword mapping, on-page, internal linking and content-gap work. Local businesses need GBP and location signals. National or ecommerce sites need architecture, category content and authority.",

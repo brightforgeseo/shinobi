@@ -87,8 +87,16 @@ function Hero() {
                 NOT JUST THE REPORT.
               </h1>
               <p className="mt-3 max-w-md text-sm leading-relaxed text-ink/80 sm:mt-5 sm:text-[1.05rem] sm:leading-[1.65]">
-                Shinobi is a search dojo for rankings, leads and commercial
-                growth — so the people who find you are ready to act.
+                SEO agency in the Philippines for rankings, leads and commercial
+                growth. Shinobi is a studio of{" "}
+                <a
+                  href={site.parentUrl}
+                  className="font-semibold underline underline-offset-4 hover:text-manga-red"
+                >
+                  {site.parentName}
+                </a>
+                , the parent company. The people who find you should be ready to
+                act.
               </p>
               <div className="mt-5 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-3">
                 <Link

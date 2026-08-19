@@ -6,11 +6,11 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "Shinobi — SEO for rankings, leads and growth" },
+      { title: "SEO Agency Philippines | Shinobi by Bright Forge" },
       {
         name: "description",
         content:
-          "SEO for businesses that need the phone to ring — not just rankings in a report. Technical SEO, content, local, authority and conversion.",
+          "Quezon City SEO agency for SEO services in the Philippines. A studio of Bright Forge SEO. Rankings, leads and commercial growth.",
       },
     ],
   }),

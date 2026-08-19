@@ -8,8 +8,14 @@ export function SiteFooter() {
         <div className="md:col-span-4">
           <p className="font-display text-3xl">SHINOBI 忍</p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-paper/70">
-            SEO for businesses that need the phone to ring — not just rankings
-            in a report. British-led search dojo. Based in the Philippines.
+            SEO agency in the Philippines. A studio of{" "}
+            <a
+              href={site.parentUrl}
+              className="text-manga-cyan underline underline-offset-4 hover:text-manga-red"
+            >
+              {site.parentName}
+            </a>
+            , the parent company. British-led search dojo in Quezon City.
           </p>
           <p className="mt-4 text-sm">{site.email}</p>
           <p className="text-sm text-paper/70">{site.phone}</p>
@@ -82,6 +88,14 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <a
+                href={site.parentUrl}
+                className="hover:text-manga-red"
+              >
+                Bright Forge SEO
+              </a>
+            </li>
+            <li>
               <Link to="/contact" className="hover:text-manga-red">
                 Contact
               </Link>
@@ -93,6 +107,10 @@ export function SiteFooter() {
         <div className="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4 text-xs text-paper/45 sm:flex-row sm:justify-between sm:px-8">
           <p>
             © {new Date().getFullYear()} {site.legal}
+          {" · "}
+          <a href={site.parentUrl} className="hover:text-paper">
+            A {site.parentName} studio
+          </a>
           </p>
           <p>
             {site.serving} · Est. {site.established}

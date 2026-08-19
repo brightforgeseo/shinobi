@@ -11,11 +11,11 @@ export const Route = createFileRoute("/about")({
   component: Page,
   head: () => ({
     meta: [
-      { title: "Dojo — Shinobi" },
+      { title: "About Shinobi | SEO Company Philippines, Bright Forge studio" },
       {
         name: "description",
         content:
-          "British-led SEO dojo based in Quezon City. 15+ years of technical, content, local and international search work.",
+          "British-led SEO dojo in Quezon City. A studio of Bright Forge SEO. Technical, content, local and international search.",
       },
     ],
   }),
@@ -55,6 +55,16 @@ function Page() {
               Ben Lowe leads strategy and quality. Delivery runs from {site.city}.
               We work with Philippine businesses and international teams across{" "}
               {site.serving}.
+            </p>
+            <p>
+              Shinobi is a studio of{" "}
+              <a
+                href={site.parentUrl}
+                className="text-ink underline underline-offset-4 hover:text-manga-red"
+              >
+                {site.parentName}
+              </a>
+              , the parent company. Same dojo rules. Different armour.
             </p>
             <p>
               We do not sell mystery task lists. We do not guarantee rankings.
