@@ -354,8 +354,8 @@ function CasesBlock() {
         </p>
         <div className="mt-8 grid gap-5 lg:grid-cols-12">
           <Link
-            to="/cases"
-            hash={lead.slug}
+            to="/cases/$slug"
+            params={{ slug: lead.slug }}
             className="manga-panel group overflow-hidden lg:col-span-7"
           >
             <FrameImg src={lead.image} alt="" className="aspect-[16/10] w-full" />
@@ -375,8 +375,8 @@ function CasesBlock() {
             {rest.slice(0, 2).map((c) => (
               <Link
                 key={c.slug}
-                to="/cases"
-                hash={c.slug}
+                to="/cases/$slug"
+                params={{ slug: c.slug }}
                 className="manga-panel group flex min-h-0 flex-1 flex-col overflow-hidden"
               >
                 <FrameImg src={c.image} alt="" className="aspect-[16/7] w-full" />

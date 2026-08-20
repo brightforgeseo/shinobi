@@ -11,7 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
-import { Route as CasesRouteImport } from './routes/cases'
 import { Route as CommandCentreRouteImport } from './routes/command-centre'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as LoginRouteImport } from './routes/login'
@@ -19,6 +18,8 @@ import { Route as StudioRouteImport } from './routes/studio'
 import { Route as WorkRouteImport } from './routes/work'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
+import { Route as CasesIndexRouteImport } from './routes/cases/index'
+import { Route as CasesSlugRouteImport } from './routes/cases/$slug'
 import { Route as DevelopmentIndexRouteImport } from './routes/development/index'
 import { Route as DevelopmentSlugRouteImport } from './routes/development/$slug'
 import { Route as IndustriesIndexRouteImport } from './routes/industries/index'
@@ -35,11 +36,6 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CasesRoute = CasesRouteImport.update({
-  id: '/cases',
-  path: '/cases',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CommandCentreRoute = CommandCentreRouteImport.update({
@@ -75,6 +71,16 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/blog/$slug',
   path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasesIndexRoute = CasesIndexRouteImport.update({
+  id: '/cases/',
+  path: '/cases/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasesSlugRoute = CasesSlugRouteImport.update({
+  id: '/cases/$slug',
+  path: '/cases/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DevelopmentIndexRoute = DevelopmentIndexRouteImport.update({
@@ -116,17 +122,18 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/cases': typeof CasesRoute
   '/command-centre': typeof CommandCentreRoute
   '/contact': typeof ContactRoute
   '/login': typeof LoginRoute
   '/studio': typeof StudioRoute
   '/work': typeof WorkRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/cases/$slug': typeof CasesSlugRoute
   '/development/$slug': typeof DevelopmentSlugRoute
   '/industries/$slug': typeof IndustriesSlugRoute
   '/seo-services/$slug': typeof SeoServicesSlugRoute
   '/blog/': typeof BlogIndexRoute
+  '/cases/': typeof CasesIndexRoute
   '/development/': typeof DevelopmentIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/seo-services/': typeof SeoServicesIndexRoute
@@ -135,17 +142,18 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/cases': typeof CasesRoute
   '/command-centre': typeof CommandCentreRoute
   '/contact': typeof ContactRoute
   '/login': typeof LoginRoute
   '/studio': typeof StudioRoute
   '/work': typeof WorkRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/cases/$slug': typeof CasesSlugRoute
   '/development/$slug': typeof DevelopmentSlugRoute
   '/industries/$slug': typeof IndustriesSlugRoute
   '/seo-services/$slug': typeof SeoServicesSlugRoute
   '/blog': typeof BlogIndexRoute
+  '/cases': typeof CasesIndexRoute
   '/development': typeof DevelopmentIndexRoute
   '/industries': typeof IndustriesIndexRoute
   '/seo-services': typeof SeoServicesIndexRoute
@@ -155,17 +163,18 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/cases': typeof CasesRoute
   '/command-centre': typeof CommandCentreRoute
   '/contact': typeof ContactRoute
   '/login': typeof LoginRoute
   '/studio': typeof StudioRoute
   '/work': typeof WorkRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/cases/$slug': typeof CasesSlugRoute
   '/development/$slug': typeof DevelopmentSlugRoute
   '/industries/$slug': typeof IndustriesSlugRoute
   '/seo-services/$slug': typeof SeoServicesSlugRoute
   '/blog/': typeof BlogIndexRoute
+  '/cases/': typeof CasesIndexRoute
   '/development/': typeof DevelopmentIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/seo-services/': typeof SeoServicesIndexRoute
@@ -176,17 +185,18 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
-    | '/cases'
     | '/command-centre'
     | '/contact'
     | '/login'
     | '/studio'
     | '/work'
     | '/blog/$slug'
+    | '/cases/$slug'
     | '/development/$slug'
     | '/industries/$slug'
     | '/seo-services/$slug'
     | '/blog/'
+    | '/cases/'
     | '/development/'
     | '/industries/'
     | '/seo-services/'
@@ -195,17 +205,18 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
-    | '/cases'
     | '/command-centre'
     | '/contact'
     | '/login'
     | '/studio'
     | '/work'
     | '/blog/$slug'
+    | '/cases/$slug'
     | '/development/$slug'
     | '/industries/$slug'
     | '/seo-services/$slug'
     | '/blog'
+    | '/cases'
     | '/development'
     | '/industries'
     | '/seo-services'
@@ -214,17 +225,18 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
-    | '/cases'
     | '/command-centre'
     | '/contact'
     | '/login'
     | '/studio'
     | '/work'
     | '/blog/$slug'
+    | '/cases/$slug'
     | '/development/$slug'
     | '/industries/$slug'
     | '/seo-services/$slug'
     | '/blog/'
+    | '/cases/'
     | '/development/'
     | '/industries/'
     | '/seo-services/'
@@ -234,17 +246,18 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  CasesRoute: typeof CasesRoute
   CommandCentreRoute: typeof CommandCentreRoute
   ContactRoute: typeof ContactRoute
   LoginRoute: typeof LoginRoute
   StudioRoute: typeof StudioRoute
   WorkRoute: typeof WorkRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  CasesSlugRoute: typeof CasesSlugRoute
   DevelopmentSlugRoute: typeof DevelopmentSlugRoute
   IndustriesSlugRoute: typeof IndustriesSlugRoute
   SeoServicesSlugRoute: typeof SeoServicesSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
+  CasesIndexRoute: typeof CasesIndexRoute
   DevelopmentIndexRoute: typeof DevelopmentIndexRoute
   IndustriesIndexRoute: typeof IndustriesIndexRoute
   SeoServicesIndexRoute: typeof SeoServicesIndexRoute
@@ -265,13 +278,6 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cases': {
-      id: '/cases'
-      path: '/cases'
-      fullPath: '/cases'
-      preLoaderRoute: typeof CasesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/command-centre': {
@@ -321,6 +327,20 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cases/': {
+      id: '/cases/'
+      path: '/cases'
+      fullPath: '/cases/'
+      preLoaderRoute: typeof CasesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cases/$slug': {
+      id: '/cases/$slug'
+      path: '/cases/$slug'
+      fullPath: '/cases/$slug'
+      preLoaderRoute: typeof CasesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/development/': {
@@ -378,17 +398,18 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  CasesRoute: CasesRoute,
   CommandCentreRoute: CommandCentreRoute,
   ContactRoute: ContactRoute,
   LoginRoute: LoginRoute,
   StudioRoute: StudioRoute,
   WorkRoute: WorkRoute,
   BlogSlugRoute: BlogSlugRoute,
+  CasesSlugRoute: CasesSlugRoute,
   DevelopmentSlugRoute: DevelopmentSlugRoute,
   IndustriesSlugRoute: IndustriesSlugRoute,
   SeoServicesSlugRoute: SeoServicesSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
+  CasesIndexRoute: CasesIndexRoute,
   DevelopmentIndexRoute: DevelopmentIndexRoute,
   IndustriesIndexRoute: IndustriesIndexRoute,
   SeoServicesIndexRoute: SeoServicesIndexRoute,

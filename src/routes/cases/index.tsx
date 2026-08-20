@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/content/PageHero";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { TiltCard } from "@/components/ui/tilt-card";
@@ -6,7 +6,7 @@ import { FrameImg } from "@/components/ui/frame-img";
 import { cases } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/cases")({
+export const Route = createFileRoute("/cases/")({
   component: Page,
   head: () => ({
     meta: [
@@ -68,6 +68,13 @@ function Page() {
                   </li>
                 ))}
               </ul>
+              <Link
+                to="/cases/$slug"
+                params={{ slug: c.slug }}
+                className="mt-7 inline-block font-display text-sm text-manga-red underline underline-offset-4"
+              >
+                Read the full case study
+              </Link>
             </div>
           </div>
         </article>
