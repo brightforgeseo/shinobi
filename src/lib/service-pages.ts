@@ -3,8 +3,24 @@ import { services } from "./site-data";
 export type ServiceBlock = { name: string; text: string };
 export type ServiceFaq = { q: string; a: string };
 
+export type ServiceShape =
+  | "crawl"
+  | "anatomy"
+  | "cluster"
+  | "map"
+  | "findings"
+  | "grid"
+  | "risk"
+  | "answer"
+  | "timeline"
+  | "split";
+
 export type ServicePage = {
   slug: string;
+  shape: ServiceShape;
+  jp: string;
+  heroTone: "paper" | "ink" | "red";
+  cta: string;
   h1: string;
   red: string;
   intro: string;
@@ -27,6 +43,10 @@ export type ServicePage = {
 export const servicePages: ServicePage[] = [
   {
     slug: "technical-seo",
+    shape: "crawl",
+    jp: "技",
+    heroTone: "ink",
+    cta: "Send the crawl before the next template change.",
     h1: "SITE HEALTH,",
     red: "INDEXATION, GROWTH.",
     intro:
@@ -68,7 +88,7 @@ export const servicePages: ServicePage[] = [
       { name: "For developers", text: "Specific tickets, expected behaviour and QA criteria." },
     ],
     faqs: [
-      { q: 'Do you offer this as SEO services in the Philippines?', a: 'Yes. Shinobi is a Quezon City SEO studio of Bright Forge SEO, the parent company. We run this work for Metro Manila, Cebu, Davao and nationwide brands, plus UK, US and AU teams.' },
+      { q: 'Will a crawl export tell us what to fix?', a: 'No. A crawl dumps warnings. We rank them by commercial impact, write developer-ready tickets, and check Search Console after the release.' },
       { q: "What are technical SEO services?", a: "They improve crawlability, indexation, speed, structure, rendering, schema and release safety — so search engines can find, understand and rank important pages." },
       { q: "Is technical SEO different from an SEO audit?", a: "An audit diagnoses. Technical SEO services go further: prioritise, write implementation briefs, help developers fix them, check the release and monitor after Google recrawls." },
       { q: "What issues usually matter most?", a: "Indexation problems, blocked pages, duplicate URLs, broken canonicals, slow templates, redirect chains, weak internal links, mobile usability, JavaScript rendering and unsupported schema." },
@@ -81,6 +101,10 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "on-page-seo",
+    shape: "anatomy",
+    jp: "頁",
+    heroTone: "paper",
+    cta: "Pick the money page that should convert first.",
     h1: "PAGES THAT RANK",
     red: "AND CONVERT.",
     intro:
@@ -126,7 +150,7 @@ export const servicePages: ServicePage[] = [
       { name: "No pointless FAQ spam", text: "FAQs handle real objections. They should not exist only to stuff schema." },
     ],
     faqs: [
-      { q: 'Do you offer this as SEO services in the Philippines?', a: 'Yes. Shinobi is a Quezon City SEO studio of Bright Forge SEO, the parent company. We run this work for Metro Manila, Cebu, Davao and nationwide brands, plus UK, US and AU teams.' },
+      { q: 'Is this just title tags and meta?', a: 'No. Titles help clicks. The page still has to match intent, prove the offer, and give a next step that a buyer will take.' },
       { q: "What is included in on-page SEO?", a: "Search intent checks, title tags, meta descriptions, H1s, heading structure, body copy, internal links, image alt text, schema recommendations, FAQs, proof placement and conversion-focused CTAs." },
       { q: "Is on-page SEO just keyword placement?", a: "No. Keyword placement is one part. Good on-page SEO makes the page clearer, more useful, better structured and more likely to earn the enquiry." },
       { q: "Which pages do you start with?", a: "Impressions with poor CTR, page-two commercial terms, service pages that get visits but few enquiries, cannibalising URLs, and pages with weak proof or vague CTAs." },
@@ -135,6 +159,10 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "content-seo",
+    shape: "cluster",
+    jp: "章",
+    heroTone: "paper",
+    cta: "Show us the service pages the content is meant to support.",
     h1: "CONTENT THAT EARNS",
     red: "ITS PLACE.",
     intro:
@@ -178,7 +206,7 @@ export const servicePages: ServicePage[] = [
       { name: "Useful reporting", text: "Rankings, impressions, clicks, links and enquiries — not a word-count report." },
     ],
     faqs: [
-      { q: 'Do you offer this as SEO services in the Philippines?', a: 'Yes. Shinobi is a Quezon City SEO studio of Bright Forge SEO, the parent company. We run this work for Metro Manila, Cebu, Davao and nationwide brands, plus UK, US and AU teams.' },
+      { q: 'Do you just write blogs?', a: 'No. Service pages, location pages, guides and refreshes come first. Supporting articles exist to feed those money pages, not replace them.' },
       { q: "Do you just write blogs?", a: "No. Service pages, location pages, guides, FAQs and refreshes come first. Blogs exist to support money pages, not replace them." },
       { q: "Is the writing AI?", a: "AI can help the workflow. Strategy, fact-checking and final polish stay human-led." },
       { q: "How do you decide what to write?", a: "Search demand, buyer questions, existing impressions, competitor gaps and which commercial page the piece should support." },
@@ -186,6 +214,10 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "local-seo",
+    shape: "map",
+    jp: "領",
+    heroTone: "red",
+    cta: "Send the GBP and the service area you actually cover.",
     h1: "MAPS, GBP,",
     red: "LOCAL LEADS.",
     intro:
@@ -230,7 +262,7 @@ export const servicePages: ServicePage[] = [
       { name: "Tracking", text: "Calls, forms, clicks and direction requests." },
     ],
     faqs: [
-      { q: 'Do you offer this as SEO services in the Philippines?', a: 'Yes. Shinobi is a Quezon City SEO studio of Bright Forge SEO, the parent company. We run this work for Metro Manila, Cebu, Davao and nationwide brands, plus UK, US and AU teams.' },
+      { q: 'Is local SEO only for shopfronts?', a: 'No. Trades, clinics, legal, repair and home services need Maps, GBP and a landing page that can take the call, even when you go to the customer.' },
       { q: "Is local SEO only for shops?", a: "No. It also matters for service-area businesses — trades, clinics, legal, repair, consultants and home services — whether customers visit you, you visit them, or both." },
       { q: "How long does local SEO take?", a: "Some GBP improvements show within weeks if the listing is incomplete. Competitive local rankings usually take two to six months depending on market, reviews, website and competitors." },
       { q: "What is included in GBP optimisation?", a: "Category review, service setup, description, service-area checks, photo guidance, posts, Q&A, review standards, tracking links, duplicate listing checks and alignment with the website." },
@@ -241,6 +273,10 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "seo-audits",
+    shape: "findings",
+    jp: "診",
+    heroTone: "ink",
+    cta: "Tell us what dropped, and when.",
     h1: "A ROADMAP",
     red: "YOU CAN USE.",
     intro:
@@ -295,13 +331,17 @@ export const servicePages: ServicePage[] = [
       { name: "No one-size checklist", text: "Ecommerce, local service and national B2B need different priorities." },
     ],
     faqs: [
-      { q: 'Do you offer this as SEO services in the Philippines?', a: 'Yes. Shinobi is a Quezon City SEO studio of Bright Forge SEO, the parent company. We run this work for Metro Manila, Cebu, Davao and nationwide brands, plus UK, US and AU teams.' },
+      { q: 'Is a tool score an audit?', a: 'No. Tools list symptoms. The job is to say which issues hold this site back, who owns the fix, and what to do first.' },
       { q: "Is a tool export an audit?", a: "No. Tools report symptoms. The valuable part is interpreting what matters for this site, this market and this business." },
       { q: "What do you prioritise first?", a: "Blockers: indexation failures, broken templates, redirect errors, canonical conflicts, critical crawl issues and tracking that stops you judging performance." },
     ],
   },
   {
     slug: "keyword-research",
+    shape: "grid",
+    jp: "図",
+    heroTone: "paper",
+    cta: "Send the services and locations that have to pay for themselves.",
     h1: "DEMAND MAPPED",
     red: "TO PAGES.",
     intro:
@@ -345,7 +385,7 @@ export const servicePages: ServicePage[] = [
       { name: "No cannibalisation traps", text: "One intent, one page. We map to avoid splitting equity." },
     ],
     faqs: [
-      { q: 'Do you offer this as SEO services in the Philippines?', a: 'Yes. Shinobi is a Quezon City SEO studio of Bright Forge SEO, the parent company. We run this work for Metro Manila, Cebu, Davao and nationwide brands, plus UK, US and AU teams.' },
+      { q: 'How is this different from an Ahrefs export?', a: 'Exports list possible terms. We decide which matter, which URL owns them, whether you can compete, and what work the page needs.' },
       { q: "How is this different from an Ahrefs export?", a: "Exports show possible terms. We decide which matter, which page owns them, whether you can compete and what work is needed." },
       { q: "Do you map to existing pages?", a: "Yes — current page, rewrite, merge or new page. That is how you avoid duplication and cannibalisation." },
       { q: "Do you include a content plan?", a: "When content is the right action. Some keywords need articles. Others need stronger service, category or location pages, FAQs or internal links." },
@@ -354,6 +394,10 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "link-building",
+    shape: "risk",
+    jp: "印",
+    heroTone: "ink",
+    cta: "Show the target pages. We will say if they are ready.",
     h1: "SAFER AUTHORITY.",
     red: "NOT VOLUME.",
     intro:
@@ -397,7 +441,7 @@ export const servicePages: ServicePage[] = [
       { name: "No irrelevant placements", text: "If a reader would not click it, we do not want it." },
     ],
     faqs: [
-      { q: 'Do you offer this as SEO services in the Philippines?', a: 'Yes. Shinobi is a Quezon City SEO studio of Bright Forge SEO, the parent company. We run this work for Metro Manila, Cebu, Davao and nationwide brands, plus UK, US and AU teams.' },
+      { q: 'Do you sell a monthly link package?', a: 'No. No PBNs, no bulk DA buys, no guessed volume. We audit the profile, pick pages that are ready, then qualify placements one by one.' },
       { q: "Are backlinks still important?", a: "Yes, especially in competitive markets. Best when technical SEO, content and internal linking are already in shape." },
       { q: "Do you use PBNs?", a: "No. No expired-domain networks, link farms or bulk guest-post packages." },
       { q: "How do you decide if a link is safe?", a: "Relevance, indexation, page and site quality, organic visibility, outbound patterns, anchor, placement context. No single metric is enough." },
@@ -407,6 +451,10 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "ai-search",
+    shape: "answer",
+    jp: "答",
+    heroTone: "paper",
+    cta: "Ask the buyer questions your pages still dodge.",
     h1: "AI SEARCH.",
     red: "SEO FIRST.",
     intro:
@@ -452,7 +500,7 @@ export const servicePages: ServicePage[] = [
       { name: "Local and review-led discovery", text: "Local SEO, reviews, service areas and proof as trust signals." },
     ],
     faqs: [
-      { q: 'Do you offer this as SEO services in the Philippines?', a: 'Yes. Shinobi is a Quezon City SEO studio of Bright Forge SEO, the parent company. We run this work for Metro Manila, Cebu, Davao and nationwide brands, plus UK, US and AU teams.' },
+      { q: 'Is this a replacement for SEO?', a: 'No. AI Overviews and answer engines still need crawlable pages, clear entities, proof and useful answers. We tighten those, not sprinkle prompts.' },
       { q: "Is AI search optimisation different from SEO?", a: "It is not a replacement. It is an extra layer that makes technical setup, content, proof, reviews and service pages easier for Google, AI Overviews and answer-led systems to understand, verify and cite." },
       { q: "Can you guarantee ChatGPT or AI Overviews?", a: "No. Nobody can. We improve the signals that make inclusion more plausible: crawlability, entity clarity, structured content, useful answers, reviews and authority." },
       { q: "What makes a page more likely to be cited?", a: "Clear answers, accurate entities, visible proof, consistent business information, useful service detail, structured headings, internal links, relevant schema, reviews and external authority." },
@@ -462,6 +510,10 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "website-migration",
+    shape: "timeline",
+    jp: "移",
+    heroTone: "ink",
+    cta: "Bring us in before URLs and templates lock.",
     h1: "SAFER LAUNCHES.",
     red: "NOT BLIND HANDOFF.",
     intro:
@@ -508,7 +560,7 @@ export const servicePages: ServicePage[] = [
       { name: "No checklist theatre", text: "The map has to match this site, not a generic PDF." },
     ],
     faqs: [
-      { q: 'Do you offer this as SEO services in the Philippines?', a: 'Yes. Shinobi is a Quezon City SEO studio of Bright Forge SEO, the parent company. We run this work for Metro Manila, Cebu, Davao and nationwide brands, plus UK, US and AU teams.' },
+      { q: 'When should SEO join a rebuild?', a: 'Before the new URL map and templates are locked. After launch we can recover, but lost equity is harder than a planned redirect map.' },
       { q: "Will a migration affect rankings?", a: "It can. Short-term movement is normal when URLs, templates or platform signals change. The goal is to reduce avoidable losses." },
       { q: "When should SEO be involved?", a: "Before the new structure and templates are finalised — during planning, before URLs, navigation, templates, redirect logic and tracking are locked." },
       { q: "Do you create redirect maps?", a: "Yes — from crawl data, ranking pages, traffic pages, backlink URLs and the planned structure." },
@@ -518,6 +570,10 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "white-label",
+    shape: "split",
+    jp: "裏",
+    heroTone: "red",
+    cta: "Tell us the client type. We stay behind your brand.",
     h1: "YOUR BRAND.",
     red: "OUR DOJO.",
     intro:
@@ -570,7 +626,7 @@ export const servicePages: ServicePage[] = [
       { name: "No direct client contact", text: "Unless you explicitly ask us onto a call." },
     ],
     faqs: [
-      { q: 'Do you offer this as SEO services in the Philippines?', a: 'Yes. Shinobi is a Quezon City SEO studio of Bright Forge SEO, the parent company. We run this work for Metro Manila, Cebu, Davao and nationwide brands, plus UK, US and AU teams.' },
+      { q: 'Will you speak to our clients?', a: 'Not by default. You keep the relationship. Reports can go out under your brand. We join a call only if you ask.' },
       { q: "How does white label SEO work?", a: "You keep the client relationship. We work behind the scenes on strategy, audits, technical, content direction, reporting and campaign support. Deliverables can go out under your brand." },
       { q: "Can reports use our branding?", a: "Yes. Client-facing under your name and structure. Internal notes for your team so you understand evidence and next steps first." },
       { q: "Do you work directly with our clients?", a: "Not by default. If you want us on a technical call or handover, we agree the rules first." },
@@ -588,5 +644,7 @@ export function getServicePage(slug: string) {
 }
 
 export function relatedServices(slug: string) {
-  return services.filter((s) => s.slug !== slug).slice(0, 4);
+  const rest = services.filter((s) => s.slug !== slug);
+  const i = Math.max(0, services.findIndex((s) => s.slug === slug));
+  return rest.slice(i).concat(rest.slice(0, i)).slice(0, 4);
 }
