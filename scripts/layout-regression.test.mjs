@@ -54,3 +54,45 @@ test("homepage close uses a compact paper briefing panel, not a red or black sla
   assert.doesNotMatch(home, /overflow-hidden bg-manga-red text-paper/);
   assert.doesNotMatch(home, /function CloseBlock\(\)[\s\S]*?<section className="[^"]*bg-ink/);
 });
+
+test("critical homepage artwork is prioritised without changing the video", () => {
+  const homeRoute = read("src/routes/index.tsx");
+  const home = read("src/components/home/HomePage.tsx");
+  assert.match(homeRoute, /rel: "preload"[\s\S]*as: "image"[\s\S]*fetchPriority: "high"/);
+  assert.match(home, /autoPlay/);
+  assert.match(home, /heroVideo/);
+});
+
+test("header serves lossless responsive logo artwork", () => {
+  const nav = read("src/components/layout/MegaNav.tsx");
+  assert.match(nav, /logo-lockup-290\.webp 290w/);
+  assert.match(nav, /logo-lockup-580\.webp 580w/);
+  assert.match(nav, /logo-lockup-870\.webp 870w/);
+  assert.match(nav, /src="\/logo-lockup\.png"/);
+});
+
+test("homepage HTML is eligible for Netlify durable edge caching", () => {
+  const middleware = read("server/middleware/grok-pwa.ts");
+  assert.match(middleware, /path === "\/"/);
+  assert.match(middleware, /Netlify-CDN-Cache-Control/);
+  assert.match(middleware, /durable/);
+});
+
+test("exact site fonts use Google variable-weight ranges without duplicated weight CSS", () => {
+  const root = read("src/routes/__root.tsx");
+  const styles = read("src/styles.css");
+  assert.doesNotMatch(styles, /site-fonts\.css/);
+  assert.match(root, /IBM\+Plex\+Mono:wght@400\.\.500/);
+  assert.match(root, /Noto\+Sans\+JP:wght@400\.\.700/);
+  assert.doesNotMatch(root, /dela-gothic-site\.woff2/);
+  assert.doesNotMatch(root, /noto-sans-jp-site\.woff2/);
+});
+
+test("below-fold artwork uses native lazy loading without changing crop quality", () => {
+  const frame = read("src/components/ui/frame-img.tsx");
+  assert.match(frame, /<img/);
+  assert.match(frame, /loading="lazy"/);
+  assert.match(frame, /decoding="async"/);
+  assert.match(frame, /object-cover object-center/);
+  assert.doesNotMatch(frame, /backgroundImage/);
+});

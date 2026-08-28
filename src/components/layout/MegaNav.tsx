@@ -46,13 +46,20 @@ export function MegaNav() {
     >
       <div className="mx-auto flex h-[8.25rem] max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
         <Link to="/" className="flex h-full shrink-0 items-center overflow-visible py-1">
-          <img
-            src="/logo-lockup.png"
-            alt="Shinobi Search Dojo"
-            width={1280}
-            height={512}
-            className="block h-[7.25rem] w-auto max-w-none object-contain object-left"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="/logo-lockup-290.webp 290w, /logo-lockup-580.webp 580w, /logo-lockup-870.webp 870w"
+              sizes="290px"
+            />
+            <img
+              src="/logo-lockup.png"
+              alt="Shinobi Search Dojo"
+              width={1280}
+              height={512}
+              className="block h-[7.25rem] w-auto max-w-none object-contain object-left"
+            />
+          </picture>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { HomePage } from "@/components/home/HomePage";
+import { media } from "@/lib/media";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -11,6 +12,14 @@ export const Route = createFileRoute("/")({
         name: "description",
         content:
           "SEO and web development for games, film, music, design and culture-led brands. Philippines-based, working worldwide. A Bright Forge SEO studio.",
+      },
+    ],
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: media.heroPoster,
+        fetchPriority: "high",
       },
     ],
   }),

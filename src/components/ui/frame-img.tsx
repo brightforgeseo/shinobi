@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-/** Background-image frame so a failed file request never shows a broken icon. */
+/** Aspect-ratio frame reserves layout while native artwork loads near the viewport. */
 export function FrameImg({
   src,
   alt = "",
@@ -11,11 +11,14 @@ export function FrameImg({
   className?: string;
 }) {
   return (
-    <div
-      role={alt ? "img" : "presentation"}
-      aria-label={alt || undefined}
-      className={cn("bg-paper-2 bg-cover bg-center", className)}
-      style={{ backgroundImage: `url("${src}")` }}
-    />
+    <div className={cn("relative overflow-hidden bg-paper-2", className)}>
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 size-full object-cover object-center"
+      />
+    </div>
   );
 }

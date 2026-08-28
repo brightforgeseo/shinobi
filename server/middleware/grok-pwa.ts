@@ -34,7 +34,11 @@ function requestHost(event: GrokPwaEvent): string {
   );
 }
 
-function injectHeadStreaming(response: Response, appName: string): Response {
+function injectHeadStreaming(
+  response: Response,
+  appName: string,
+  cacheHomepage: boolean,
+): Response {
   const injector = createHeadInjector(appName);
   const transformed = response.body!.pipeThrough(
     new TransformStream<Uint8Array, Uint8Array>({
@@ -48,6 +52,12 @@ function injectHeadStreaming(response: Response, appName: string): Response {
   );
   const headers = new Headers(response.headers);
   headers.delete("content-length");
+  if (cacheHomepage) {
+    headers.set(
+      "Netlify-CDN-Cache-Control",
+      "public, durable, s-maxage=300, stale-while-revalidate=86400",
+    );
+  }
   return new Response(transformed, {
     status: response.status,
     statusText: response.statusText,
@@ -100,7 +110,11 @@ export default async function grokPwaMiddleware(
     String(result.headers.get("content-type") ?? "").includes("text/html") &&
     !result.headers.get("content-encoding")
   ) {
-    return injectHeadStreaming(result, appNameFromHost(requestHost(event)));
+    return injectHeadStreaming(
+      result,
+      appNameFromHost(requestHost(event)),
+      path === "/",
+    );
   }
   return result;
 }
