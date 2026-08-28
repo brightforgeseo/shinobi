@@ -86,7 +86,7 @@ function Hero() {
                 <span className="block text-manga-red">TO RING.</span>
                 NOT JUST THE REPORT.
               </h1>
-              <p className="mt-3 max-w-md text-sm font-bold leading-relaxed text-manga-red sm:mt-5 sm:text-[1.05rem] sm:leading-[1.65]">
+              <p className="manga-panel mt-3 max-w-md bg-paper/95 px-3 py-2 text-sm font-bold leading-relaxed text-ink sm:mt-5 sm:text-[1.05rem] sm:leading-[1.65]">
                 SEO and web development for games, film, music, design and
                 culture-led brands. Built in the Philippines for creative
                 businesses competing worldwide. Shinobi is a studio of{" "}
