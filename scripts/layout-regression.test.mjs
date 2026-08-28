@@ -39,3 +39,9 @@ test("homepage positioning copy uses a paper caption over the video", () => {
     /text-white[^>]*>\s*SEO and web development for games, film, music, design and/s,
   );
 });
+
+test("desktop hero content sits to the right of the woman", () => {
+  const home = read("src/components/home/HomePage.tsx");
+  assert.match(home, /bg-gradient-to-r[^\n]*lg:bg-gradient-to-l/);
+  assert.match(home, /max-w-xl lg:ml-auto/);
+});

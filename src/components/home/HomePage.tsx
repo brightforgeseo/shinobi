@@ -67,14 +67,14 @@ function Hero() {
           <source src="/video/hero.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-paper via-paper/55 to-paper/10 sm:bg-none" />
-        <div className="absolute inset-0 hidden bg-gradient-to-r from-paper/70 via-paper/20 to-transparent sm:block" />
+        <div className="absolute inset-0 hidden bg-gradient-to-r from-paper/70 via-paper/20 to-transparent sm:block lg:bg-gradient-to-l" />
         <div className="absolute inset-x-0 bottom-0 hidden h-32 bg-gradient-to-t from-paper/35 to-transparent sm:block" />
         <span className="absolute right-4 top-4 font-display text-3xl text-manga-red drop-shadow-[2px_2px_0_#fff6e8] sm:right-6 sm:top-6 sm:text-4xl lg:right-10 lg:text-5xl">
           参上
         </span>
         <div className="absolute inset-x-0 bottom-0 z-10">
           <div className="mx-auto max-w-7xl px-4 pb-[max(1.75rem,env(safe-area-inset-bottom))] sm:px-8 sm:pb-12 lg:pb-16">
-            <div className="max-w-xl">
+            <div className="max-w-xl lg:ml-auto">
               <p className="font-display text-[0.62rem] tracking-[0.14em] text-manga-red sm:text-xs sm:tracking-[0.22em]">
                 <span className="sm:hidden">第01話 · PHILIPPINES SEO</span>
                 <span className="hidden sm:inline">
