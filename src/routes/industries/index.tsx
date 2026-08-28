@@ -2,27 +2,40 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Chapter } from "@/components/content/Chapter";
 import { PageHero } from "@/components/content/PageHero";
 import { SiteShell } from "@/components/layout/SiteShell";
-import { TiltCard } from "@/components/ui/tilt-card";
 import { buttonVariants } from "@/components/ui/button";
 import { industries } from "@/lib/site-data";
-import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/industries/")({
   component: Page,
   head: () => ({
     meta: [
-      { title: "Industries | SEO Agency Philippines — Shinobi" },
+      { title: "Creative Industry SEO Philippines | Shinobi" },
       {
         name: "description",
         content:
-          "Industry SEO in the Philippines and abroad: finance, real estate, home services, pet services, gaming and football. A studio of Bright Forge SEO.",
+          "SEO for games, film, animation, music, arts, fashion, events, creative studios and media. Philippines-based, working worldwide.",
       },
     ],
   }),
 });
 
+const groupNotes: Record<string, string> = {
+  "Play & Interactive":
+    "Titles, platforms, tools and communities. Search architecture has to survive launch day, updates and the long tail of player discovery.",
+  "Screen & Sound":
+    "Reels, catalogues, credits, releases and bookings. Rich media stays expressive while the route to the work stays crawlable.",
+  "Art & Culture":
+    "Practices, programmes, collections and designed products. Findability without replacing the language or point of view.",
+  "Live & Editorial":
+    "Events and publishing move quickly. Editions, archives, contributors and commercial routes need a structure that lasts.",
+  "Sport & Fandom":
+    "Communities, fixtures, programmes and products organised around the way fans and participants search.",
+  "Other proven sectors":
+    "Shinobi leads with the creative industries, but the parent-company method also carries into high-trust, local and service markets.",
+};
+
 function Page() {
-  const groups = [...new Set(industries.map((i) => i.group))];
+  const groups = [...new Set(industries.map((industry) => industry.group))];
 
   return (
     <SiteShell>
@@ -30,62 +43,82 @@ function Page() {
         chapter="09"
         jp="領域"
         kicker="Industries"
-        title="BATTLEFIELDS"
-        red="WE ALREADY READ."
+        title="MADE TO BE SEEN."
+        red="BUILT TO BE FOUND."
       >
-        Not a generic playbook copied across categories. Philippine search
-        habits first, then UK, US and AU. Intent before content. Commercial
-        pages first.
+        SEO for games, film, animation, music, art, fashion and culture-led
+        businesses. We keep the visual identity, then build the routes that help
+        players, audiences, commissioners, buyers and collaborators find it.
       </PageHero>
 
-      <section className="border-b-[3px] border-ink bg-paper-2/40">
-        <div className="mx-auto grid max-w-7xl gap-4 px-5 py-10 sm:px-8 md:grid-cols-3">
-          {[
-            { k: "Intent first", v: "Map what buyers are trying to do before deciding which pages need work." },
-            { k: "Commercial pages", v: "Service, product, category and location pages before generic blog volume." },
-            { k: "Measured", v: "Rankings, visibility, clicks and enquiry paths — so the work has a job." },
-          ].map((p) => (
-            <TiltCard key={p.k} className="manga-panel h-full p-5">
-              <p className="font-display text-xs tracking-[0.16em] text-manga-red">
-                {p.k.toUpperCase()}
-              </p>
-              <p className="mt-2 text-sm">{p.v}</p>
-            </TiltCard>
-          ))}
+      <section className="border-b-[3px] border-ink bg-ink text-paper">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <p className="font-display text-xs tracking-[0.18em] text-manga-red">
+              CREATIVE FIELD GUIDE
+            </p>
+            <h2 className="mt-3 font-display text-3xl">The work has a life cycle.</h2>
+          </div>
+          <p className="max-w-3xl text-lg leading-relaxed text-paper/75 lg:col-span-8">
+            A game has a reveal, launch, patches and a community. A film has a reel,
+            credits, screenings and distribution. A festival has editions. A label
+            has a catalogue. We design search around those realities, not a generic
+            service-page template copied across industries.
+          </p>
         </div>
       </section>
 
-      {groups.map((g) => (
-        <section key={g} className="border-b-[3px] border-ink">
-          <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
-            <Chapter n="—" jp="門">
-              {g}
-            </Chapter>
-            <div className="mt-8 grid gap-4 md:grid-cols-2">
-              {industries
-                .filter((a) => a.group === g)
-                .map((a, n) => (
-                  <TiltCard
-                    key={a.slug}
-                    className={cn("h-full p-5", n === 1 ? "manga-panel-red" : "manga-panel")}
-                  >
-                    <Link to="/industries/$slug" params={{ slug: a.slug }} className="block">
-                      <p className="font-display text-xs text-manga-red">{a.mangaName}</p>
-                      <h2 className="mt-1 font-display text-2xl">{a.name}</h2>
-                      <p className="mt-2 text-sm leading-relaxed text-muted">{a.lede}</p>
-                      <p className="mt-4 font-display text-xs text-manga-red">Open scroll →</p>
+      {groups.map((group, groupIndex) => {
+        const groupIndustries = industries.filter((industry) => industry.group === group);
+        return (
+          <section
+            key={group}
+            className={`border-b-[3px] border-ink ${
+              groupIndex % 2 ? "bg-paper-2/45" : "bg-paper"
+            }`}
+          >
+            <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <Chapter n={String(groupIndex + 1).padStart(2, "0")} jp="門">
+                  {group}
+                </Chapter>
+                <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted">
+                  {groupNotes[group]}
+                </p>
+              </div>
+              <ol className="divide-y-[2px] divide-ink border-y-[2px] border-ink lg:col-span-8">
+                {groupIndustries.map((industry, index) => (
+                  <li key={industry.slug}>
+                    <Link
+                      to="/industries/$slug"
+                      params={{ slug: industry.slug }}
+                      className="grid gap-3 py-6 transition-colors hover:text-manga-red sm:grid-cols-[3rem_1fr_2fr] sm:gap-5"
+                    >
+                      <span className="font-display text-xs text-manga-red">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <span>
+                        <span className="block font-display text-xl">{industry.name}</span>
+                        <span className="mt-1 block text-[0.65rem] uppercase tracking-wider text-faint">
+                          {industry.mangaName}
+                        </span>
+                      </span>
+                      <span className="text-sm leading-relaxed text-muted">
+                        {industry.lede}
+                      </span>
                     </Link>
-                  </TiltCard>
+                  </li>
                 ))}
+              </ol>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        );
+      })}
 
       <section className="bg-manga-red text-paper">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 py-14 sm:px-8 md:flex-row md:items-center">
           <p className="max-w-xl font-display text-3xl">
-            If this is your market, start with a review — not a generic package.
+            Your field missing? Send the work, audience and commercial goal.
           </p>
           <Link to="/contact" className={buttonVariants({ variant: "invert", size: "lg" })}>
             Request a review

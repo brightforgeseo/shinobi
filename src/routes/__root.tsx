@@ -9,7 +9,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { Toaster } from "sonner";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Shinobi | SEO Agency Philippines";
+const APP_NAME = "Shinobi | Creative Industry SEO Philippines";
 const OG_IMAGE = "https://shinobiseo.netlify.app/og.jpg";
 const OG_URL = "https://shinobiseo.netlify.app/";
 
@@ -22,7 +22,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Shinobi is a Quezon City SEO agency and a studio of Bright Forge SEO. SEO services in the Philippines, plus UK, US and AU.",
+          "SEO and web development for games, film, music, design and culture-led brands. Philippines-based, working worldwide.",
       },
       { name: "apple-mobile-web-app-title", content: "Shinobi" },
       { name: "theme-color", content: "#fff6e8" },
@@ -31,7 +31,7 @@ export const Route = createRootRoute({
       {
         name: "twitter:description",
         content:
-          "Quezon City SEO dojo. A studio of Bright Forge SEO. Diagnosis first. Fewer pages. Better ones.",
+          "Creative industry SEO from the Philippines for games, film, music, design and culture-led brands. A Bright Forge SEO studio.",
       },
       { name: "twitter:image", content: OG_IMAGE },
       { property: "og:type", content: "website" },
@@ -40,7 +40,7 @@ export const Route = createRootRoute({
       {
         property: "og:description",
         content:
-          "Quezon City SEO dojo. A studio of Bright Forge SEO. Diagnosis first. Fewer pages. Better ones.",
+          "Creative industry SEO from the Philippines for games, film, music, design and culture-led brands. A Bright Forge SEO studio.",
       },
       { property: "og:image", content: OG_IMAGE },
       { property: "og:image:secure_url", content: OG_IMAGE },

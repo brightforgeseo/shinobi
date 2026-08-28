@@ -8,14 +8,15 @@ export function SiteFooter() {
         <div className="md:col-span-4">
           <p className="font-display text-3xl">SHINOBI 忍</p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-paper/70">
-            SEO agency in the Philippines. A studio of{" "}
+            SEO and web development for games, film, music, design and culture-led
+            brands. A studio of{" "}
             <a
               href={site.parentUrl}
               className="text-manga-cyan underline underline-offset-4 hover:text-manga-red"
             >
               {site.parentName}
             </a>
-            , the parent company. British-led search dojo in Quezon City.
+            , the parent company. British-led, Philippines-based.
           </p>
           <p className="mt-4 text-sm">{site.email}</p>
           <p className="text-sm text-paper/70">{site.phone}</p>
@@ -49,17 +50,27 @@ export function SiteFooter() {
             INDUSTRIES
           </p>
           <ul className="mt-3 space-y-2 text-sm">
-            {industries.map((i) => (
-              <li key={i.slug}>
-                <Link
-                  to="/industries/$slug"
-                  params={{ slug: i.slug }}
-                  className="hover:text-manga-red"
-                >
-                  {i.name}
-                </Link>
-              </li>
-            ))}
+            {industries
+              .filter((industry) => industry.group !== "Other proven sectors")
+              .map((i) => (
+                <li key={i.slug}>
+                  <Link
+                    to="/industries/$slug"
+                    params={{ slug: i.slug }}
+                    className="hover:text-manga-red"
+                  >
+                    {i.name}
+                  </Link>
+                </li>
+              ))}
+            <li>
+              <Link
+                to="/industries"
+                className="font-semibold text-manga-cyan hover:text-manga-red"
+              >
+                View every industry
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="md:col-span-2">

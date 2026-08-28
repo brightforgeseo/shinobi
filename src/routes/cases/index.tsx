@@ -14,7 +14,7 @@ export const Route = createFileRoute("/cases/")({
       {
         name: "description",
         content:
-          "Shinobi SEO case studies: traffic, clicks, CTR and AI-search sessions for Philippine and international brands. A studio of Bright Forge SEO.",
+          "SEO case studies across fashion, ecommerce, sport, software and service markets. Parent-company proof used by Shinobi with clear labels.",
       },
     ],
   }),
@@ -30,9 +30,9 @@ function Page() {
         title="PROOF THAT MOVES"
         red="MORE THAN RANKINGS."
       >
-        Visibility, clicks, traffic and conversion opportunities. Philippine and
-        international work. Names used with permission or described by sector.
-        Parent company: Bright Forge SEO.
+        The current proof spans fashion, designed products, sport, software and
+        service markets. We do not invent a film or game result to make the niche
+        look fuller. These are Bright Forge parent-company cases, clearly labelled.
       </PageHero>
 
       {cases.map((c, i) => (
@@ -55,7 +55,10 @@ function Page() {
               <p className="mt-3 text-sm leading-relaxed text-muted">{c.summary}</p>
               <dl className="mt-6 grid grid-cols-3 gap-3">
                 {c.metrics.map((m) => (
-                  <div key={m.label} className="manga-panel px-2 py-3 text-center">
+                  <div
+                    key={`${m.label}-${m.value}`}
+                    className="manga-panel px-2 py-3 text-center"
+                  >
                     <dt className="font-display text-xl text-manga-red">{m.value}</dt>
                     <dd className="mt-1 text-[0.65rem] text-muted">{m.label}</dd>
                   </div>

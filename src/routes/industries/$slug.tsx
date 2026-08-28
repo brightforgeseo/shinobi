@@ -4,6 +4,7 @@ import { PageHero } from "@/components/content/PageHero";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { buttonVariants } from "@/components/ui/button";
 import { getIndustryPage } from "@/lib/industry-pages";
+import { toMetaDescription } from "@/lib/meta";
 import { industries } from "@/lib/site-data";
 
 export const Route = createFileRoute("/industries/$slug")({
@@ -16,7 +17,10 @@ export const Route = createFileRoute("/industries/$slug")({
   head: ({ loaderData }) => ({
     meta: [
       { title: `${loaderData?.name ?? "Industry"} SEO Philippines | Shinobi` },
-      { name: "description", content: loaderData?.intro ?? loaderData?.lede ?? "" },
+      {
+        name: "description",
+        content: toMetaDescription(loaderData?.intro ?? loaderData?.lede ?? "Industry SEO from Shinobi."),
+      },
     ],
   }),
 });

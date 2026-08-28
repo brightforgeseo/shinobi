@@ -2,11 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Chapter } from "@/components/content/Chapter";
 import { PageHero } from "@/components/content/PageHero";
 import { SiteShell } from "@/components/layout/SiteShell";
-import { TiltCard } from "@/components/ui/tilt-card";
 import { buttonVariants } from "@/components/ui/button";
 import { hubFaqs, hubFocus } from "@/lib/dev-pages";
 import { development } from "@/lib/site-data";
-import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/development/")({
   component: Page,
@@ -16,7 +14,7 @@ export const Route = createFileRoute("/development/")({
       {
         name: "description",
         content:
-          "SEO-first web development from Shinobi in Quezon City. Astro, SvelteKit, Next.js, React and WordPress. A studio of Bright Forge SEO.",
+          "SEO-first web development for creative, media and entertainment sites. Fast portfolios, catalogues, releases and campaigns without hidden content.",
       },
     ],
   }),
@@ -32,28 +30,24 @@ function Page() {
         chapter="00"
         jp="開"
         kicker="SEO-first web development"
-        title="PROTECT RANKINGS"
-        red="FROM THE START."
+        title="VISUAL SITES."
+        red="VISIBLE CONTENT."
       >
-        A good website build should not make SEO harder. We plan structure,
-        speed, content, redirects, schema and tracking before launch. Quezon
-        City dojo. A studio of Bright Forge SEO.
+        Creative sites can move, play and misbehave without hiding the work. We
+        build portfolio, catalogue, release and campaign pages with performance,
+        crawlability and launch safety planned from the start.
       </PageHero>
 
-      <section className="border-b-[3px] border-ink bg-paper-2/40">
-        <div className="mx-auto grid max-w-7xl gap-4 px-5 py-10 sm:px-8 md:grid-cols-3">
-          {[
-            { k: "SEO before polish", v: "Crawlability, metadata, content structure and redirects before visual extras." },
-            { k: "Performance", v: "Fast pages help users and reduce technical drag before SEO work even starts." },
-            { k: "Human QA", v: "Manual checks for forms, schema, indexing and conversion paths." },
-          ].map((p) => (
-            <TiltCard key={p.k} className="manga-panel h-full p-5">
-              <p className="font-display text-xs tracking-[0.16em] text-manga-red">
-                {p.k.toUpperCase()}
-              </p>
-              <p className="mt-2 text-sm">{p.v}</p>
-            </TiltCard>
-          ))}
+      <section className="border-b-[3px] border-ink bg-ink text-paper">
+        <div className="mx-auto grid max-w-7xl gap-6 px-5 py-10 sm:px-8 lg:grid-cols-12">
+          <p className="font-display text-2xl text-manga-red lg:col-span-4">
+            Motion is allowed.
+          </p>
+          <p className="max-w-3xl text-lg leading-relaxed text-paper/75 lg:col-span-8">
+            The rule is simple: the reel, game, exhibition, collection or story
+            should still exist as useful HTML, routes and metadata when the visual
+            effects are stripped away. We test both versions.
+          </p>
         </div>
       </section>
 
@@ -72,20 +66,20 @@ function Page() {
             stack, templates and launch checks that support visibility rather
             than create SEO debt.
           </p>
-          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <ol className="mt-8 divide-y-[3px] divide-ink border-y-[3px] border-ink">
             {hubFocus.map((item, i) => (
-              <TiltCard
+              <li
                 key={item.name}
-                className={cn(
-                  "h-full p-5",
-                  i % 3 === 1 ? "manga-panel-red" : i % 3 === 2 ? "manga-panel-cyan" : "manga-panel",
-                )}
+                className="grid gap-3 py-6 sm:grid-cols-[4rem_16rem_1fr] sm:items-start"
               >
+                <p className="font-display text-sm text-manga-red">
+                  {String(i + 1).padStart(2, "0")}
+                </p>
                 <h3 className="font-display text-xl">{item.name}</h3>
-                <p className="mt-2 text-sm text-muted">{item.text}</p>
-              </TiltCard>
+                <p className="text-sm leading-relaxed text-muted">{item.text}</p>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
@@ -94,7 +88,7 @@ function Page() {
           <Chapter n="02" jp="法">
             How we build without creating SEO debt
           </Chapter>
-          <ol className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ol className="mt-8 border-y-[2px] border-paper/40">
             {[
               ["01", "Audit", "Current site, rankings, crawl, content, analytics, conversion risks."],
               ["02", "Plan", "Templates, URLs, content sections, redirects, schema, priorities."],
@@ -103,10 +97,13 @@ function Page() {
               ["05", "Launch", "Checklist, Search Console, post-launch crawl."],
               ["06", "Improve", "Ranking, crawl and conversion data after launch."],
             ].map(([n, name, text]) => (
-              <li key={n} className="border-[3px] border-paper/70 p-5">
+              <li
+                key={n}
+                className="grid gap-2 border-b border-paper/30 py-5 last:border-b-0 sm:grid-cols-[4rem_10rem_1fr]"
+              >
                 <p className="font-display text-manga-red">{n}</p>
-                <h3 className="mt-1 font-display text-xl">{name}</h3>
-                <p className="mt-2 text-sm text-paper/70">{text}</p>
+                <h3 className="font-display text-xl">{name}</h3>
+                <p className="text-sm leading-relaxed text-paper/70">{text}</p>
               </li>
             ))}
           </ol>
@@ -123,34 +120,43 @@ function Page() {
             Modern frameworks and core technologies. The right one depends on
             content, editing needs, interactivity, performance and SEO risk.
           </p>
-          <h3 className="mt-10 font-display text-sm tracking-[0.16em] text-manga-red">
-            MODERN FRAMEWORKS
-          </h3>
-          <div className="mt-4 grid gap-4 md:grid-cols-3">
-            {modern.map((d, i) => (
-              <TiltCard
-                key={d.slug}
-                className={cn("h-full p-5", i === 1 ? "manga-panel-red" : "manga-panel")}
-              >
-                <Link to="/development/$slug" params={{ slug: d.slug }} className="block">
-                  <h3 className="font-display text-2xl">{d.name}</h3>
-                  <p className="mt-2 text-sm text-muted">{d.lede}</p>
-                </Link>
-              </TiltCard>
-            ))}
-          </div>
-          <h3 className="mt-10 font-display text-sm tracking-[0.16em] text-manga-red">
-            CORE TECHNOLOGIES
-          </h3>
-          <div className="mt-4 grid gap-4 md:grid-cols-2">
-            {core.map((d) => (
-              <TiltCard key={d.slug} className="manga-panel-cyan h-full p-5">
-                <Link to="/development/$slug" params={{ slug: d.slug }} className="block">
-                  <h3 className="font-display text-2xl">{d.name}</h3>
-                  <p className="mt-2 text-sm text-muted">{d.lede}</p>
-                </Link>
-              </TiltCard>
-            ))}
+          <div className="mt-10 grid gap-10 lg:grid-cols-12">
+            <h3 className="font-display text-sm tracking-[0.16em] text-manga-red lg:col-span-3">
+              MODERN FRAMEWORKS
+            </h3>
+            <ul className="divide-y-[2px] divide-ink border-y-[3px] border-ink lg:col-span-9">
+              {modern.map((d) => (
+                <li key={d.slug}>
+                  <Link
+                    to="/development/$slug"
+                    params={{ slug: d.slug }}
+                    className="grid gap-2 py-5 hover:text-manga-red sm:grid-cols-[10rem_1fr_auto]"
+                  >
+                    <h3 className="font-display text-xl">{d.name}</h3>
+                    <p className="text-sm leading-relaxed text-muted">{d.lede}</p>
+                    <span className="font-display text-manga-red">→</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="font-display text-sm tracking-[0.16em] text-manga-red lg:col-span-3">
+              CORE TECHNOLOGIES
+            </h3>
+            <ul className="divide-y-[2px] divide-ink border-y-[3px] border-ink lg:col-span-9">
+              {core.map((d) => (
+                <li key={d.slug}>
+                  <Link
+                    to="/development/$slug"
+                    params={{ slug: d.slug }}
+                    className="grid gap-2 py-5 hover:text-manga-red sm:grid-cols-[10rem_1fr_auto]"
+                  >
+                    <h3 className="font-display text-xl">{d.name}</h3>
+                    <p className="text-sm leading-relaxed text-muted">{d.lede}</p>
+                    <span className="font-display text-manga-red">→</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -160,21 +166,22 @@ function Page() {
           <Chapter n="04" jp="誰">
             Who this suits
           </Chapter>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <ol className="mt-8 divide-y-[2px] divide-ink border-y-[3px] border-ink">
             {[
-              { n: "Replacing an old site", t: "Protect what already ranks while the templates change." },
-              { n: "Rebuilding slow WordPress", t: "Keep the CMS if it still fits — or leave it if it does not." },
-              { n: "Launching a service site", t: "Structure, speed and conversion paths before the visual extras." },
-            ].map((item) => (
-              <div key={item.n} className="manga-panel p-5">
+              { n: "Launching a title or release", t: "Build durable routes before launch traffic arrives." },
+              { n: "Rebuilding a visual portfolio", t: "Keep the motion and image quality without hiding the work." },
+              { n: "Growing a catalogue or archive", t: "Structure collections, projects, people and formats before they sprawl." },
+            ].map((item, i) => (
+              <li key={item.n} className="grid gap-2 py-5 sm:grid-cols-[4rem_18rem_1fr]">
+                <p className="font-display text-sm text-manga-red">0{i + 1}</p>
                 <h3 className="font-display text-xl">{item.n}</h3>
-                <p className="mt-2 text-sm text-muted">{item.t}</p>
-              </div>
+                <p className="text-sm leading-relaxed text-muted">{item.t}</p>
+              </li>
             ))}
-          </div>
-          <div className="manga-panel-red mt-6 p-5">
+          </ol>
+          <div className="mt-8 border-l-[6px] border-manga-red bg-ink p-6 text-paper">
             <p className="font-display text-xl">What we will not do</p>
-            <p className="mt-2 text-sm text-muted">
+            <p className="mt-2 text-sm text-paper/70">
               We will not sell a shiny rebuild that creates indexation problems,
               strips content, loses redirects or weakens the pages already
               supporting SEO performance.

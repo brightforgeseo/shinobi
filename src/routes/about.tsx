@@ -15,7 +15,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "British-led SEO dojo in Quezon City. A studio of Bright Forge SEO. Technical, content, local and international search.",
+          "British-led, Philippines-based SEO and web studio for creative and culture-led brands. A studio of Bright Forge SEO.",
       },
     ],
   }),
@@ -32,8 +32,8 @@ function Page() {
         red="PHILIPPINES-BASED."
       >
         Founded after more than fifteen years of practical search work. Senior
-        judgement, a Manila delivery team, and reporting tied to enquiries — not
-        vanity metrics.
+        judgement, a Manila delivery team, and a focus on creative and culture-led
+        businesses that need distinctive work to be found without becoming generic.
       </PageHero>
 
       <section className="border-b-[3px] border-ink">
@@ -53,7 +53,8 @@ function Page() {
             </p>
             <p>
               Ben Lowe leads strategy and quality. Delivery runs from {site.city}.
-              We work with Philippine businesses and international teams across{" "}
+              We work with games, film, music, design, culture and other creative
+              businesses in the Philippines and international teams across{" "}
               {site.serving}.
             </p>
             <p>
@@ -68,8 +69,9 @@ function Page() {
             </p>
             <p>
               We do not sell mystery task lists. We do not guarantee rankings.
-              We do connect technical SEO, useful content, conversion paths and
-              reporting so search visibility has a route to enquiries.
+              We connect technical SEO, useful content, portfolios, catalogues,
+              conversion paths and reporting so creative attention has a route to
+              bookings, sales, audiences or enquiries.
             </p>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/content/PageHero";
 import { SiteShell } from "@/components/layout/SiteShell";
-import { TiltCard } from "@/components/ui/tilt-card";
+
 import { buttonVariants } from "@/components/ui/button";
 import { commandLayers } from "@/lib/site-data";
 
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/command-centre")({
       {
         name: "description",
         content:
-          "Shinobi Command Centre: monitoring, QA, reporting and approval-gated SEO ops. A Bright Forge SEO operating layer for Philippine and international campaigns.",
+          "Monitoring, QA and reporting for launch cycles, catalogues, portfolios and creative SEO campaigns. Human-controlled operations from Shinobi.",
       },
     ],
   }),
@@ -29,32 +29,29 @@ function Page() {
         title="CONTROL."
         red="NOT MORE AUTOMATION."
       >
-        Most campaigns fail because signals are missed, reports disconnect from
-        action, and tasks get marked done without proof. The Command Centre is
-        the Bright Forge operating layer wearing Shinobi armour. Not a dashboard
-        export.
+        Creative campaigns move around launches, releases, events and changing
+        catalogues. The Command Centre catches technical drift, missed demand and
+        weak handoffs without turning the work into another automated dashboard.
       </PageHero>
 
       <section className="border-b-[3px] border-ink">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
           <p className="max-w-3xl text-lg">
             It is not blind automation. It is a controlled system for making
-            technical SEO, content, CRO, AI search readiness and reporting work
-            together — with human approval where it matters.
+            technical SEO, content, launch monitoring and reporting work together,
+            with human approval where it matters.
           </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ol className="mt-10 divide-y-[2px] divide-ink border-y-[2px] border-ink">
             {commandLayers.map((l, i) => (
-              <TiltCard
-                key={l.name}
-                className={
-                  i % 2 === 0 ? "manga-panel h-full p-5" : "manga-panel-red h-full p-5"
-                }
-              >
+              <li key={l.name} className="grid gap-2 py-6 sm:grid-cols-[4rem_1fr_2fr] sm:gap-5">
+                <span className="font-display text-sm text-manga-red">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 <h2 className="font-display text-xl">{l.name}</h2>
-                <p className="mt-2 text-sm text-muted">{l.text}</p>
-              </TiltCard>
+                <p className="text-sm leading-relaxed text-muted">{l.text}</p>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 

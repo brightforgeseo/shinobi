@@ -13,7 +13,7 @@ export const Route = createFileRoute("/blog/")({
       {
         name: "description",
         content:
-          "Notes from the Quezon City dojo: audits, timelines, local SEO in the Philippines and AI search. A Bright Forge SEO studio.",
+          "Field notes on creative SEO, technical discovery, launches, portfolios, catalogues and search from the Shinobi dojo.",
       },
     ],
   }),
@@ -29,7 +29,8 @@ function Page() {
         title="THINGS WE KEEP"
         red="WRITING DOWN."
       >
-        Short notes from the Quezon City dojo. Not a content mill.
+        Notes on creative discovery, technical search and the parts of a launch,
+        portfolio or catalogue that social alone does not carry. Not a content mill.
       </PageHero>
       <section>
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-12">

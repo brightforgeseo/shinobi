@@ -39,4 +39,6 @@ export const Button = forwardRef<
 ));
 Button.displayName = "Button";
 
+// Shared variant helper is intentionally exported for link-style controls.
+// eslint-disable-next-line react-refresh/only-export-components
 export { buttonVariants };

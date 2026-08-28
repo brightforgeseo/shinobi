@@ -87,16 +87,16 @@ function Hero() {
                 NOT JUST THE REPORT.
               </h1>
               <p className="mt-3 max-w-md text-sm leading-relaxed text-ink/80 sm:mt-5 sm:text-[1.05rem] sm:leading-[1.65]">
-                SEO agency in the Philippines for rankings, leads and commercial
-                growth. Shinobi is a studio of{" "}
+                SEO and web development for games, film, music, design and
+                culture-led brands. Built in the Philippines for creative
+                businesses competing worldwide. Shinobi is a studio of{" "}
                 <a
                   href={site.parentUrl}
                   className="font-semibold underline underline-offset-4 hover:text-manga-red"
                 >
                   {site.parentName}
                 </a>
-                , the parent company. The people who find you should be ready to
-                act.
+                , the parent company.
               </p>
               <div className="mt-5 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-3">
                 <Link
@@ -121,8 +121,8 @@ function Hero() {
               <div className="mt-5 grid max-w-md grid-cols-3 gap-2 sm:mt-10 sm:gap-3">
                 {[
                   { k: "Experience", v: `${site.experience} yrs` },
-                  { k: "Parent cases", v: site.publishedCases },
-                  { k: "Style", v: "SEO + CRO" },
+                  { k: "Parent cases", v: String(cases.length) },
+                  { k: "Focus", v: "Creative" },
                 ].map((s) => (
                   <div
                     key={s.k}
@@ -236,8 +236,8 @@ function WhoBlock() {
             Who this is for
           </Chapter>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl">
-            Operators who need
-            <span className="text-manga-red"> enquiries, not theatre.</span>
+            Built for people who make
+            <span className="text-manga-red"> things worth finding.</span>
           </h2>
         </div>
         <ul className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
@@ -448,31 +448,51 @@ function QuotesBlock() {
 }
 
 function IndustriesBlock() {
+  const creative = industries.filter((i) => i.group !== "Other proven sectors");
   return (
     <section className="border-b-[3px] border-ink">
-      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-12">
+        <div className="lg:col-span-4">
         <Chapter n="10" jp="領">
           Industries
         </Chapter>
         <h2 className="mt-4 font-display text-3xl sm:text-4xl">
-          Arenas we already
-          <span className="text-manga-red"> know how to fight in.</span>
+          Games, screens, stages
+          <span className="text-manga-red"> and subcultures.</span>
         </h2>
-        <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {industries.map((i) => (
+        <p className="mt-4 text-sm leading-relaxed text-muted">
+          Search for businesses that make things people play, watch, hear,
+          wear, visit and follow. The creative industries lead the studio.
+        </p>
+        <Link
+          to="/industries"
+          className={cn(buttonVariants({ variant: "outline" }), "mt-7")}
+        >
+          Explore every industry
+        </Link>
+        </div>
+        <ol className="divide-y-[2px] divide-ink border-y-[2px] border-ink lg:col-span-8">
+          {creative.map((i, index) => (
             <li key={i.slug}>
               <Link
                 to="/industries/$slug"
                 params={{ slug: i.slug }}
-                className="manga-panel block h-full p-5 hover:bg-paper-2"
+                className="grid gap-2 py-5 transition-colors hover:text-manga-red sm:grid-cols-[3rem_1fr_2fr] sm:items-start sm:gap-5"
               >
-                <p className="font-display text-xs text-manga-red">{i.mangaName}</p>
-                <h3 className="mt-1 font-display text-xl">{i.name}</h3>
-                <p className="mt-2 text-sm text-muted">{i.lede}</p>
+                <span className="font-display text-xs text-manga-red">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span>
+                  <span className="block font-display text-lg">{i.name}</span>
+                  <span className="mt-1 block text-[0.65rem] uppercase tracking-wider text-faint">
+                    {i.mangaName}
+                  </span>
+                </span>
+                <span className="text-sm leading-relaxed text-muted">{i.lede}</span>
               </Link>
             </li>
           ))}
-        </ul>
+        </ol>
       </div>
     </section>
   );

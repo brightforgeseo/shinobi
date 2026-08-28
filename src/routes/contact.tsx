@@ -16,7 +16,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Request an SEO review from Shinobi in Quezon City. A studio of Bright Forge SEO. Philippines, UK, US and AU.",
+          "Request an SEO or website review for a game, film, music, arts, design or culture-led business. Shinobi is based in Quezon City.",
       },
     ],
   }),
@@ -53,8 +53,8 @@ function ContactPage() {
               >
                 {site.parentName}
               </a>
-              . Send the site, the city and what is stuck. If more SEO is not the
-              answer yet, we say so.
+              . Send the site, project, release, catalogue or audience you need to
+              grow, plus what is stuck. If more SEO is not the answer yet, we say so.
             </p>
             <dl className="mt-10 space-y-4 border-t-[3px] border-ink pt-8 text-sm">
               <div>
@@ -129,7 +129,7 @@ function ContactPage() {
                 name="problem"
                 required
                 rows={5}
-                placeholder="Rankings, enquiries, a drop, a migration, AI visibility, weak service pages…"
+                placeholder="A launch, weak discovery, a hidden portfolio, a migration, ticket sales, signups or enquiries…"
               />
             </div>
             <div>
@@ -137,7 +137,7 @@ function ContactPage() {
               <Input
                 id="success"
                 name="success"
-                placeholder="Calls, forms, pipeline, rankings…"
+                placeholder="Wishlists, bookings, tickets, sales, streams, signups or qualified enquiries…"
               />
             </div>
             <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">

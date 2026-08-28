@@ -50,7 +50,7 @@ export const servicePages: ServicePage[] = [
     h1: "SITE HEALTH,",
     red: "INDEXATION, GROWTH.",
     intro:
-      "A website can look polished and still be difficult for search engines to crawl, render, index or trust. Technical SEO finds the hidden problems behind stalled rankings, wasted crawl budget, slow templates, duplicate URLs and risky site changes. We turn the audit into practical fixes . not a spreadsheet graveyard. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We run this for Philippine businesses and international teams.",
+      "A website can look polished and still be difficult for search engines to crawl, render, index or trust. Technical SEO finds the hidden problems behind stalled rankings, wasted crawl budget, slow templates, duplicate URLs and risky site changes. We turn the audit into practical fixes . not a spreadsheet graveyard. Shinobi is a Quezon City SEO studio of Bright Forge SEO. For creative sites, that often means video-heavy portfolios, game or platform routes, event archives and JavaScript experiences that look excellent but hide the work.",
     pillars: [
       { k: "Indexation", v: "Find the pages Google should and should not index." },
       { k: "Performance", v: "Speed, Core Web Vitals and mobile experience." },
@@ -108,7 +108,7 @@ export const servicePages: ServicePage[] = [
     h1: "PAGES THAT RANK",
     red: "AND CONVERT.",
     intro:
-      "Some pages do not need another blog supporting them. They need better structure, clearer intent, stronger proof, cleaner internal links and a reason for the visitor to act. On-page SEO is where we make service pages, local pages, category pages and landing pages clearer for Google and more convincing for buyers. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We run this for Philippine businesses and international teams.",
+      "Some pages do not need another blog supporting them. They need better structure, clearer intent, stronger proof, cleaner internal links and a reason for the visitor to act. On-page SEO is where we make service pages, local pages, category pages and landing pages clearer for Google and more convincing for buyers. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We apply it to title pages, releases, projects, collections, artist profiles and capability pages where the language has to stay recognisable while the intent becomes clear.",
     pillars: [
       { k: "Clarify", v: "Intent, titles, headings, copy and page purpose." },
       { k: "Connect", v: "Internal links, related services and supporting content." },
@@ -166,7 +166,7 @@ export const servicePages: ServicePage[] = [
     h1: "CONTENT THAT EARNS",
     red: "ITS PLACE.",
     intro:
-      "SEO content should do more than fill a blog. We plan, write and improve content that targets the right searches, supports your service pages, builds topical authority and helps turn organic traffic into enquiries. Search intent, not guesswork. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We run this for Philippine businesses and international teams.",
+      "SEO content should do more than fill a blog. We plan, write and improve content that targets the right searches, supports your service pages, builds topical authority and helps turn organic traffic into enquiries. Search intent, not guesswork. Shinobi is a Quezon City SEO studio of Bright Forge SEO. For creative brands, the content system may include launch pages, production notes, catalogues, interviews, guides and archives, each supporting a real audience or commercial route.",
     pillars: [
       { k: "Search intent", v: "What the buyer actually needs." },
       { k: "Page mapping", v: "Where each topic should live." },
@@ -221,7 +221,7 @@ export const servicePages: ServicePage[] = [
     h1: "MAPS, GBP,",
     red: "LOCAL LEADS.",
     intro:
-      "Local SEO is not just about showing up on a map. It is about helping nearby customers find the right business, trust it quickly and take the next step . call, book, visit, ask for directions or send an enquiry. Stronger Google Business Profile performance, cleaner local signals, better location pages. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We run this for Philippine businesses and international teams.",
+      "Local SEO is not just about showing up on a map. It is about helping nearby customers find the right business, trust it quickly and take the next step . call, book, visit, ask for directions or send an enquiry. Stronger Google Business Profile performance, cleaner local signals, better location pages. Shinobi is a Quezon City SEO studio of Bright Forge SEO. Local search matters to venues, studios, galleries, tattoo shops, production services, retailers and events when people need to visit, book or hire nearby.",
     pillars: [
       { k: "GBP", v: "Accuracy, services, photos, posts, Q&A and tracking." },
       { k: "Maps", v: "Local pack visibility for the services and areas that matter." },
@@ -280,7 +280,7 @@ export const servicePages: ServicePage[] = [
     h1: "A ROADMAP",
     red: "YOU CAN USE.",
     intro:
-      "More SEO activity does not help if the site has the wrong problem. Many sites do not need more random blogs, another backlink package or cosmetic metadata edits. They need to understand why organic performance is stuck, dropping or failing to convert. A proper audit connects technical evidence, content quality, search demand, authority and buyer behaviour into a roadmap. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We run this for Philippine businesses and international teams.",
+      "More SEO activity does not help if the site has the wrong problem. Many sites do not need more random blogs, another backlink package or cosmetic metadata edits. They need to understand why organic performance is stuck, dropping or failing to convert. A proper audit connects technical evidence, content quality, search demand, authority and buyer behaviour into a roadmap. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We audit how a creative site handles media, portfolios, releases, archives, commerce and conversion, then separate the real blockers from visual preferences.",
     pillars: [
       { k: "Evidence", v: "Crawl, GSC, rankings and conversion paths before we recommend." },
       { k: "Prioritised", v: "Blockers, opportunities, quick wins and noise — separated." },
@@ -345,7 +345,7 @@ export const servicePages: ServicePage[] = [
     h1: "DEMAND MAPPED",
     red: "TO PAGES.",
     intro:
-      "Good keyword research tells you what to do next. Not a dump from Ahrefs. A roadmap: which terms matter, which page should own them, whether you can realistically compete, and what work is needed. Priorities, not noise. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We run this for Philippine businesses and international teams.",
+      "Good keyword research tells you what to do next. Not a dump from Ahrefs. A roadmap: which terms matter, which page should own them, whether you can realistically compete, and what work is needed. Priorities, not noise. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We map how players, commissioners, fans, buyers, visitors and collaborators search, then decide whether the answer is a title page, project, category, event, artist profile or guide.",
     pillars: [
       { k: "Mapped", v: "Search demand mapped to pages." },
       { k: "Priorities", v: "Not every term deserves a page." },
@@ -401,7 +401,7 @@ export const servicePages: ServicePage[] = [
     h1: "SAFER AUTHORITY.",
     red: "NOT VOLUME.",
     intro:
-      "Link building for businesses that need relevant backlinks without a risky profile. Relevance, quality and risk control. Transparent reporting. No PBNs, no bulk DA packages, no exact-match abuse. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We run this for Philippine businesses and international teams.",
+      "Link building for businesses that need relevant backlinks without a risky profile. Relevance, quality and risk control. Transparent reporting. No PBNs, no bulk DA packages, no exact-match abuse. Shinobi is a Quezon City SEO studio of Bright Forge SEO. For creative brands, strong authority can come from relevant press, collaborators, festivals, institutions, communities and specialist publications, not bulk guest-post inventory.",
     pillars: [
       { k: "Relevance", v: "Links that would make sense to a real reader." },
       { k: "Risk-aware", v: "Qualification before outreach. Review before reporting." },
@@ -458,7 +458,7 @@ export const servicePages: ServicePage[] = [
     h1: "AI SEARCH.",
     red: "SEO FIRST.",
     intro:
-      "AI search is not a magic replacement for SEO. It rewards the same things serious SEO has always worked toward: technically accessible pages, clear entities, useful answers, strong proof, real authority and content that helps buyers decide. We make priority pages easier for Google, AI Overviews, ChatGPT-style answers and Perplexity-style citations to understand, verify and cite. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We run this for Philippine businesses and international teams.",
+      "AI search is not a magic replacement for SEO. It rewards the same things serious SEO has always worked toward: technically accessible pages, clear entities, useful answers, strong proof, real authority and content that helps buyers decide. We make priority pages easier for Google, AI Overviews, ChatGPT-style answers and Perplexity-style citations to understand, verify and cite. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We make projects, people, products and expertise easier to understand and cite without turning every page into an FAQ block or replacing SEO fundamentals with AI language.",
     pillars: [
       { k: "SEO-first", v: "No “SEO is dead” nonsense." },
       { k: "Answer-ready", v: "Snippets, AI Overviews and direct answers." },
@@ -517,7 +517,7 @@ export const servicePages: ServicePage[] = [
     h1: "SAFER LAUNCHES.",
     red: "NOT BLIND HANDOFF.",
     intro:
-      "Most migration losses are preventable. We map risk before launch, plan redirects with evidence, and stay for launch support . redesigns, CMS changes, domain moves, ecommerce replatforms, URL restructures and site consolidations. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We run this for Philippine businesses and international teams.",
+      "Most migration losses are preventable. We map risk before launch, plan redirects with evidence, and stay for launch support . redesigns, CMS changes, domain moves, ecommerce replatforms, URL restructures and site consolidations. Shinobi is a Quezon City SEO studio of Bright Forge SEO. Creative migrations need extra care around image libraries, reels, project URLs, event archives, product collections and campaign pages that a redesign is tempted to delete.",
     pillars: [
       { k: "Risk mapped", v: "Before URLs and templates are locked in." },
       { k: "Redirects", v: "Planned with evidence. Not everything to the homepage." },
@@ -577,7 +577,7 @@ export const servicePages: ServicePage[] = [
     h1: "YOUR BRAND.",
     red: "OUR DOJO.",
     intro:
-      "SEO outsourcing for agencies that need depth without payroll drag. This is not a cheap package page. It is for teams that already own client trust and need a reliable SEO partner behind them. We do not contact or poach your clients. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We run this for Philippine businesses and international teams.",
+      "SEO outsourcing for agencies that need depth without payroll drag. This is not a cheap package page. It is for teams that already own client trust and need a reliable SEO partner behind them. We do not contact or poach your clients. Shinobi is a Quezon City SEO studio of Bright Forge SEO. We support agencies and studios behind the scenes on technical SEO, research, content, migrations and QA while their client relationship and creative direction stay theirs.",
     pillars: [
       { k: "Your name", v: "Reports and summaries under your agency brand." },
       { k: "Our judgement", v: "Senior review before anything is client-ready." },

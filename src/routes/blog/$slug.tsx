@@ -125,7 +125,9 @@ function FieldNotePage() {
 
       <section className="bg-manga-red text-paper">
         <div className="mx-auto flex max-w-5xl flex-col items-start justify-between gap-6 px-5 py-12 sm:px-8 md:flex-row md:items-center">
-          <p className="max-w-lg font-display text-3xl">Want this applied to your site?</p>
+          <p className="max-w-lg font-display text-3xl">
+            Want this applied to your title, portfolio, catalogue or platform?
+          </p>
           <Link to="/contact" className={buttonVariants({ variant: "invert", size: "lg" })}>
             Request an SEO review
           </Link>

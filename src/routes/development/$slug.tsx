@@ -4,6 +4,7 @@ import { PageHero } from "@/components/content/PageHero";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { buttonVariants } from "@/components/ui/button";
 import { getDevPage } from "@/lib/dev-pages";
+import { toMetaDescription } from "@/lib/meta";
 import { development } from "@/lib/site-data";
 
 export const Route = createFileRoute("/development/$slug")({
@@ -16,7 +17,10 @@ export const Route = createFileRoute("/development/$slug")({
   head: ({ loaderData }) => ({
     meta: [
       { title: `${loaderData?.name ?? "Development"} Philippines | Shinobi` },
-      { name: "description", content: loaderData?.intro ?? loaderData?.lede ?? "" },
+      {
+        name: "description",
+        content: toMetaDescription(loaderData?.intro ?? loaderData?.lede ?? "SEO-first development from Shinobi."),
+      },
     ],
   }),
 });
@@ -36,6 +40,19 @@ function Page() {
       >
         {d.intro}
       </PageHero>
+
+      <section className="border-b-[3px] border-ink bg-ink text-paper">
+        <div className="mx-auto grid max-w-7xl gap-5 px-5 py-9 sm:px-8 lg:grid-cols-12">
+          <p className="font-display text-xl text-manga-red lg:col-span-4">
+            Creative use case
+          </p>
+          <p className="max-w-3xl leading-relaxed text-paper/75 lg:col-span-8">
+            The stack serves the work. Reels, game pages, catalogues, exhibitions,
+            events and editorial archives should remain fast, crawlable and easy
+            to update after the launch team moves on.
+          </p>
+        </div>
+      </section>
 
       <section className="border-b-[3px] border-ink">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-12">

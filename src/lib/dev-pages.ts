@@ -104,7 +104,7 @@ export const devPages: DevPage[] = [
     h1: "FAST PAGES.",
     red: "CLEAN HTML.",
     intro:
-      "Astro builds for content-led sites that need speed, clean HTML and SEO-friendly structure. A strong choice when a site needs fast pages, mostly static content, clear templates and minimal JavaScript. We use it when the business case fits — not because every site needs the newest framework.",
+      "Astro builds for editorial archives, festival sites, studio portfolios and culture-led brands that need speed, clean HTML and SEO-friendly structure. A strong choice when a site needs fast pages, mostly static content, clear templates and minimal JavaScript. We use it when the business case fits, not because every site needs the newest framework.",
     whyTitle: "Astro is useful when the site needs speed, control and clean content delivery",
     why: "Astro can be a strong fit for content-led and service-led websites because it keeps pages fast and limits unnecessary JavaScript. That only helps SEO when page structure, internal links, schema and launch checks are handled properly. We build around crawlability, performance, editable content needs and safe migration planning. Fit-for-purpose — not a magic ranking factor.",
     includedTitle: "What an Astro build still has to get right",
@@ -159,7 +159,7 @@ export const devPages: DevPage[] = [
     h1: "LEAN SITES.",
     red: "SEARCH CLARITY.",
     intro:
-      "SvelteKit builds for fast, lean sites where performance and developer experience both matter. It can produce elegant sites — but the SEO value still depends on routing, content structure, metadata, internal links and launch QA.",
+      "SvelteKit builds for interactive creative sites, tools and media experiences where performance and developer experience both matter. It can produce elegant sites, but the SEO value still depends on routing, content structure, metadata, internal links and launch QA.",
     whyTitle: "SvelteKit should pair speed with search clarity",
     why: "SvelteKit can be a strong fit for fast, modern web experiences, but speed alone does not make a site search-ready. The build still needs sensible routes, content structure, metadata, schema, tracking and migration control. We use it where it fits the product and SEO requirements, then protect the launch with practical technical checks.",
     includedTitle: "What a SvelteKit build still has to get right",
@@ -214,7 +214,7 @@ export const devPages: DevPage[] = [
     h1: "REACT + SSR.",
     red: "WITHOUT THE DEBT.",
     intro:
-      "Next.js builds for dynamic sites where React, server rendering and SEO planning all need to line up. Powerful for product-led sites and applications — and easy to get wrong if rendering, metadata, routing and performance are not planned.",
+      "Next.js builds for game platforms, media catalogues, ticketing products and dynamic creative sites where React, server rendering and SEO planning all need to line up. Powerful for product-led sites and applications, and easy to get wrong if rendering, metadata, routing and performance are not planned.",
     whyTitle: "Next.js should solve a product problem without creating an SEO one",
     why: "Next.js can support complex sites, applications and scalable content systems, but the SEO value depends on rendering choices, information architecture and technical discipline. We plan builds around crawlable pages, reliable metadata, performance budgets, structured content and launch QA so the framework supports the strategy rather than distracting from it.",
     includedTitle: "What a Next.js build still has to get right",
@@ -275,7 +275,7 @@ export const devPages: DevPage[] = [
     h1: "INTERFACES.",
     red: "NOT AFTERTHOUGHTS.",
     intro:
-      "React builds for interfaces that need interactivity without turning SEO into an afterthought. Useful when the product needs real interaction — and it needs careful planning around rendering, routing, metadata and performance if organic search matters.",
+      "React builds for interactive stories, tools, game communities and product experiences that need interactivity without turning SEO into an afterthought. Useful when the product needs real interaction. It still needs careful planning around rendering, routing, metadata and performance if organic search matters.",
     whyTitle: "React needs SEO guardrails before it becomes the default answer",
     why: "React can be right for interactive products and app-like experiences, but not every marketing site needs it. Poor rendering choices, heavy JavaScript and weak routes make organic visibility harder than it needs to be. We use React when the functionality justifies it, with clear decisions around rendering, routes, metadata, performance and content accessibility.",
     includedTitle: "What a React build still has to get right",
@@ -330,7 +330,7 @@ export const devPages: DevPage[] = [
     h1: "EDITORIAL CONTROL.",
     red: "LESS BLOAT.",
     intro:
-      "WordPress builds with cleaner architecture, SEO controls and less plugin bloat. Still the right choice for many businesses — but only when the theme, plugins, content model and SEO controls are planned. A bloated setup makes every SEO task harder.",
+      "WordPress builds for publishers, venues, studios and cultural teams that need editorial control, cleaner architecture, SEO controls and less plugin bloat. Still the right choice for many businesses, but only when the theme, plugins, content model and SEO controls are planned. A bloated setup makes every SEO task harder.",
     whyTitle: "WordPress works when the CMS is governed — not when it is a plugin pile",
     why: "WordPress can work well when teams need editorial control, but weak themes, plugin bloat and messy templates quietly damage SEO. We build or improve WordPress around clean templates, content governance, metadata control, structured data, performance and technical SEO foundations.",
     includedTitle: "What a WordPress build still has to get right",

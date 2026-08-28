@@ -58,7 +58,10 @@ function CaseStudyPage() {
             </p>
             <dl className="mt-8 grid grid-cols-3 gap-3">
               {item.metrics.map((metric) => (
-                <div key={metric.label} className="manga-panel px-3 py-4 text-center">
+                <div
+                  key={`${metric.label}-${metric.value}`}
+                  className="manga-panel px-3 py-4 text-center"
+                >
                   <dt className="font-display text-2xl text-manga-red">{metric.value}</dt>
                   <dd className="mt-1 text-[0.68rem] uppercase tracking-wider text-muted">
                     {metric.label}
@@ -151,7 +154,7 @@ function CaseStudyPage() {
       <section className="bg-manga-red text-paper">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 py-14 sm:px-8 md:flex-row md:items-center">
           <p className="max-w-xl font-display text-3xl">
-            Want the same evidence-first review on your site?
+            Want the same evidence-first review on your creative site?
           </p>
           <Link to="/contact" className={buttonVariants({ variant: "invert", size: "lg" })}>
             Request a review
