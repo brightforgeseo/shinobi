@@ -17,6 +17,13 @@ const core = services.filter((s) => s.group === "core");
 const strategy = services.filter((s) => s.group === "strategy");
 
 const industryGroups = [...new Set(industries.map((i) => i.group))];
+const industryColumns = industryGroups.reduce<string[][]>(
+  (columns, group, index) => {
+    columns[index % 3].push(group);
+    return columns;
+  },
+  [[], [], []],
+);
 const devGroups = [...new Set(development.map((d) => d.group))];
 
 type Panel = "seo" | "dev" | "ind" | null;
@@ -342,27 +349,31 @@ function DevMega() {
 function IndMega() {
   return (
     <div className="grid gap-8 md:grid-cols-3">
-      {industryGroups.map((g) => (
-        <div key={g}>
-          <p className="font-display text-xs tracking-[0.18em] text-manga-red">
-            {g.toUpperCase()}
-          </p>
-          <ul className="mt-3 space-y-1">
-            {industries
-              .filter((i) => i.group === g)
-              .map((i) => (
-                <li key={i.slug}>
-                  <Link
-                    to="/industries/$slug"
-                    params={{ slug: i.slug }}
-                    className="block px-2 py-2 hover:bg-panel"
-                  >
-                    <span className="font-display text-sm">{i.name}</span>
-                    <span className="mt-0.5 block text-xs text-muted">{i.mangaName}</span>
-                  </Link>
-                </li>
-              ))}
-          </ul>
+      {industryColumns.map((groups, columnIndex) => (
+        <div key={columnIndex} className="space-y-8">
+          {groups.map((g) => (
+            <div key={g}>
+              <p className="font-display text-xs tracking-[0.18em] text-manga-red">
+                {g.toUpperCase()}
+              </p>
+              <ul className="mt-3 space-y-1">
+                {industries
+                  .filter((i) => i.group === g)
+                  .map((i) => (
+                    <li key={i.slug}>
+                      <Link
+                        to="/industries/$slug"
+                        params={{ slug: i.slug }}
+                        className="block px-2 py-2 hover:bg-panel"
+                      >
+                        <span className="font-display text-sm">{i.name}</span>
+                        <span className="mt-0.5 block text-xs text-muted">{i.mangaName}</span>
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          ))}
         </div>
       ))}
     </div>
