@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Chapter } from "@/components/content/Chapter";
-import { Spine } from "@/components/content/Editorial";
+
 import { FrameImg } from "@/components/ui/frame-img";
 import { buttonVariants } from "@/components/ui/button";
 import { media } from "@/lib/media";
@@ -548,29 +548,40 @@ function FaqBlock() {
 
 function CloseBlock() {
   return (
-    <section className="relative overflow-hidden bg-manga-red text-paper">
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-12">
-        <div className="lg:col-span-6">
+    <section className="border-t-[3px] border-ink bg-paper-2 text-ink">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 lg:grid-cols-12 lg:items-center lg:py-14">
+        <div className="lg:col-span-5">
           <Chapter n="13" jp="次">
             Next
           </Chapter>
-          <h2 className="mt-4 font-display text-4xl sm:text-5xl">
+          <h2 className="mt-4 max-w-md font-display text-4xl sm:text-5xl">
             Request a review.
           </h2>
-          <p className="mt-4 max-w-prose text-paper/85">
+          <p className="mt-4 max-w-md leading-relaxed text-muted">
             Send the site. We look at search position, commercial gaps and whether
             there is a fit. If more SEO is not the answer yet, we say so.
           </p>
           <Link
             to="/contact"
-            className={cn(buttonVariants({ variant: "invert", size: "lg" }), "mt-8")}
+            className={cn(buttonVariants({ variant: "accent", size: "lg" }), "mt-7")}
           >
             Request an SEO review
           </Link>
         </div>
-        <div className="lg:col-span-6">
-          <Spine items={nextSteps.map((s) => ({ name: s.name, text: s.text }))} />
-        </div>
+        <ol className="border-[3px] border-ink bg-paper lg:col-span-7">
+          {nextSteps.map((step, index) => (
+            <li
+              key={step.name}
+              className="grid gap-2 border-b-2 border-ink px-4 py-4 last:border-b-0 sm:grid-cols-[3rem_12rem_1fr] sm:items-start sm:gap-4 sm:px-5"
+            >
+              <span className="font-display text-sm text-manga-red">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3 className="font-semibold leading-snug">{step.name}</h3>
+              <p className="text-sm leading-relaxed text-muted">{step.text}</p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

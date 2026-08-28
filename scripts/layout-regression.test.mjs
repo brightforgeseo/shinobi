@@ -45,3 +45,12 @@ test("desktop hero content sits to the right of the woman", () => {
   assert.match(home, /bg-gradient-to-r[^\n]*lg:bg-gradient-to-l/);
   assert.match(home, /max-w-xl lg:ml-auto/);
 });
+
+test("homepage close uses a compact paper briefing panel, not a red or black slab", () => {
+  const home = read("src/components/home/HomePage.tsx");
+  assert.match(home, /bg-paper-2 text-ink/);
+  assert.match(home, /border-\[3px\] border-ink bg-paper/);
+  assert.match(home, /nextSteps\.map/);
+  assert.doesNotMatch(home, /overflow-hidden bg-manga-red text-paper/);
+  assert.doesNotMatch(home, /function CloseBlock\(\)[\s\S]*?<section className="[^"]*bg-ink/);
+});
