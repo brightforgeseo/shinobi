@@ -27,9 +27,13 @@ test("homepage media stays out of the server-rendered HTML payload", () => {
   assert.doesNotMatch(media, /\?inline/);
 });
 
-test("homepage positioning copy stays white over the hero image", () => {
+test("homepage positioning copy stays bold red over the hero image", () => {
   const home = read("src/components/home/HomePage.tsx");
   assert.match(
+    home,
+    /font-bold[^>]*text-manga-red|text-manga-red[^>]*font-bold/,
+  );
+  assert.doesNotMatch(
     home,
     /text-white[^>]*>\s*SEO and web development for games, film, music, design and/s,
   );
