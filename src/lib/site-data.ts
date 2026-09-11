@@ -557,37 +557,68 @@ export const quotes = [
 
 export const notes = [
   {
-    slug: "six-month-seo-myth",
-    title: "The six-month SEO myth",
-    date: "Mar 2026",
-    excerpt:
-      "Some technical defects clear in weeks. Competitive head terms take a quarter or two. Anyone selling a miracle month is selling you a story.",
-    body: "Campaigns do not start working on a calendar invite. Technical fixes can move coverage quickly. Content and authority compound. We date the thesis so nobody is guessing — and we say so if the category will take longer than you have patience for.",
+    "slug": "six-month-seo-myth",
+    "title": "The Six-Month SEO Myth",
+    "date": "",
+    "excerpt": "Build an SEO timeline around verified changes, indexing, relevant searches and enquiries. Learn what to review before waiting or spending more.",
+    "body": "Build an SEO timeline around verified changes, indexing, relevant searches and enquiries. Learn what to review before waiting or spending more."
   },
   {
-    slug: "audits-that-miss",
-    title: "Why most SEO audits miss the real problems",
-    date: "Jan 2026",
-    excerpt:
-      "If the audit needs a table of contents, nobody will do the work. Owners, severity, dates — or it is theatre.",
-    body: "The useful audit is short. It separates blockers from nice-to-have clean-up. It names the pages that should generate enquiries. It does not congratulate itself for finding 400 missing alt attributes.",
+    "slug": "audits-that-miss",
+    "title": "SEO Audits That Miss the Point",
+    "date": "",
+    "excerpt": "Learn how to turn SEO audit warnings into prioritised tasks with evidence, clear owners, acceptance checks and live retests for creative websites.",
+    "body": "Learn how to turn SEO audit warnings into prioritised tasks with evidence, clear owners, acceptance checks and live retests for creative websites."
   },
   {
-    slug: "ai-cannot-kill-seo",
-    title: "Why AI cannot kill SEO even if it wants to",
-    date: "Nov 2025",
-    excerpt:
-      "AI answers still need crawlable, trustworthy sources. The job changed. The need for the work did not.",
-    body: "For twenty years SEO had one job: rank. Now the front page is also an answer. That makes every click more expensive and the page that earns it more important. Fundamentals first. AI readiness on top.",
+    "slug": "ai-cannot-kill-seo",
+    "title": "AI Cannot Kill SEO",
+    "date": "",
+    "excerpt": "AI changes discovery, not the need for useful, accessible pages. Learn what Google requires and where creative brands should focus their SEO investment.",
+    "body": "AI changes discovery, not the need for useful, accessible pages. Learn what Google requires and where creative brands should focus their SEO investment."
   },
   {
-    slug: "local-seo-small-business",
-    title: "Local SEO when the phone has to ring",
-    date: "Oct 2025",
-    excerpt:
-      "GBP, service-area pages, reviews and a page that makes the next step obvious. Manila, Cebu, Davao, then the rest of the map.",
-    body: "Small service businesses in the Philippines do not need a blog calendar. They need to win the searches people type when something is broken, then convert the visit. Map pack, location pages, proof, tracking. Same method Bright Forge uses on parent-company work.",
+    "slug": "local-seo-small-business",
+    "title": "Local SEO for Small Businesses",
+    "date": "",
+    "excerpt": "Prioritise accurate business details, useful local pages, genuine reviews and clear enquiry paths for your creative studio or venue.",
+    "body": "Prioritise accurate business details, useful local pages, genuine reviews and clear enquiry paths for your creative studio or venue."
   },
+  {
+    "slug": "portfolio-rendering-checks",
+    "title": "Can Search Read Your Creative Portfolio?",
+    "date": "",
+    "excerpt": "Check your portfolio’s initial HTML, rendered content and Google crawler evidence to find missing project text and links without stripping out the motion.",
+    "body": "Check your portfolio’s initial HTML, rendered content and Google crawler evidence to find missing project text and links without stripping out the motion."
+  },
+  {
+    "slug": "game-website-search-ownership",
+    "title": "Mapping Search Ownership for a Game Website",
+    "date": "",
+    "excerpt": "Decide which game pages should own title, franchise, release, availability and support questions, when to add URLs and how to preserve useful links.",
+    "body": "Decide which game pages should own title, franchise, release, availability and support questions, when to add URLs and how to preserve useful links."
+  },
+  {
+    "slug": "collections-versus-categories",
+    "title": "Seasonal Collections or Evergreen Categories?",
+    "date": "",
+    "excerpt": "Choose ecommerce collections and categories by buyer purpose, stock continuity, useful content and navigation, with a practical plan for retiring seasonal pages.",
+    "body": "Choose ecommerce collections and categories by buyer purpose, stock continuity, useful content and navigation, with a practical plan for retiring seasonal pages."
+  },
+  {
+    "slug": "video-performance-without-losing-design",
+    "title": "Improving Video Performance Without Losing the Design",
+    "date": "",
+    "excerpt": "Improve video website performance with repeatable tests for loading, encoding and playback, while preserving the visual quality of your creative work.",
+    "body": "Improve video website performance with repeatable tests for loading, encoding and playback, while preserving the visual quality of your creative work."
+  },
+  {
+    "slug": "ai-referrals-versus-citations",
+    "title": "AI Referrals Are Not Citation Share",
+    "date": "",
+    "excerpt": "Separate AI referral sessions, sampled citations and enquiries. Build repeatable measurement and choose the right work for your creative business.",
+    "body": "Separate AI referral sessions, sampled citations and enquiries. Build repeatable measurement and choose the right work for your creative business."
+  }
 ];
 
 export const commandLayers = [
