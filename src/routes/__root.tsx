@@ -7,16 +7,18 @@ import {
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { Toaster } from "sonner";
+import { RouteSeo } from "@/components/RouteSeo";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "Shinobi | Creative Industry SEO Philippines";
-const OG_IMAGE = "https://shinobiseo.netlify.app/og.jpg";
-const OG_URL = "https://shinobiseo.netlify.app/";
+const OG_IMAGE = "https://shinobiseo.com/og.jpg";
+
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
+      { name: "google-site-verification", content: "oMcrKoNHGoaMhLUcbbfnAo918wSq0rVuQqD4qv5BajI" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
       {
@@ -27,21 +29,9 @@ export const Route = createRootRoute({
       { name: "apple-mobile-web-app-title", content: "Shinobi" },
       { name: "theme-color", content: "#fff6e8" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: APP_NAME },
-      {
-        name: "twitter:description",
-        content:
-          "Creative industry SEO from the Philippines for games, film, music, design and culture-led brands. A Bright Forge SEO studio.",
-      },
+
       { name: "twitter:image", content: OG_IMAGE },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: OG_URL },
-      { property: "og:title", content: APP_NAME },
-      {
-        property: "og:description",
-        content:
-          "Creative industry SEO from the Philippines for games, film, music, design and culture-led brands. A Bright Forge SEO studio.",
-      },
+
       { property: "og:image", content: OG_IMAGE },
       { property: "og:image:secure_url", content: OG_IMAGE },
       { property: "og:image:type", content: "image/jpeg" },
@@ -70,6 +60,7 @@ export const Route = createRootRoute({
     <html lang="en" suppressHydrationWarning>
       <head>
         <HeadContent />
+        <RouteSeo />
       </head>
       <body>
         <PreviewHostBridge />

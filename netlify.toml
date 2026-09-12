@@ -4,3 +4,7 @@
 
 [build.environment]
   NITRO_PRESET = "netlify"
+
+[[edge_functions]]
+  function = "canonical"
+  path = "/*"

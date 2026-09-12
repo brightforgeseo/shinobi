@@ -9,7 +9,7 @@ export const Route = createFileRoute("/industries/")({
   component: Page,
   head: () => ({
     meta: [
-      { title: "Creative Industry SEO Philippines | Shinobi" },
+      { title: "Creative Industries We Serve | Shinobi SEO Philippines" },
       {
         name: "description",
         content:

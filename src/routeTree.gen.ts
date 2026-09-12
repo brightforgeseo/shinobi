@@ -14,6 +14,8 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as CommandCentreRouteImport } from './routes/command-centre'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as StudioRouteImport } from './routes/studio'
 import { Route as WorkRouteImport } from './routes/work'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
@@ -51,6 +53,16 @@ const ContactRoute = ContactRouteImport.update({
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const StudioRoute = StudioRouteImport.update({
@@ -125,6 +137,8 @@ export interface FileRoutesByFullPath {
   '/command-centre': typeof CommandCentreRoute
   '/contact': typeof ContactRoute
   '/login': typeof LoginRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/studio': typeof StudioRoute
   '/work': typeof WorkRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -145,6 +159,8 @@ export interface FileRoutesByTo {
   '/command-centre': typeof CommandCentreRoute
   '/contact': typeof ContactRoute
   '/login': typeof LoginRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/studio': typeof StudioRoute
   '/work': typeof WorkRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -166,6 +182,8 @@ export interface FileRoutesById {
   '/command-centre': typeof CommandCentreRoute
   '/contact': typeof ContactRoute
   '/login': typeof LoginRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/studio': typeof StudioRoute
   '/work': typeof WorkRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -188,6 +206,8 @@ export interface FileRouteTypes {
     | '/command-centre'
     | '/contact'
     | '/login'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/studio'
     | '/work'
     | '/blog/$slug'
@@ -208,6 +228,8 @@ export interface FileRouteTypes {
     | '/command-centre'
     | '/contact'
     | '/login'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/studio'
     | '/work'
     | '/blog/$slug'
@@ -228,6 +250,8 @@ export interface FileRouteTypes {
     | '/command-centre'
     | '/contact'
     | '/login'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/studio'
     | '/work'
     | '/blog/$slug'
@@ -249,6 +273,8 @@ export interface RootRouteChildren {
   CommandCentreRoute: typeof CommandCentreRoute
   ContactRoute: typeof ContactRoute
   LoginRoute: typeof LoginRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StudioRoute: typeof StudioRoute
   WorkRoute: typeof WorkRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -299,6 +325,20 @@ declare module '@tanstack/react-router' {
       path: '/login'
       fullPath: '/login'
       preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/studio': {
@@ -401,6 +441,8 @@ const rootRouteChildren: RootRouteChildren = {
   CommandCentreRoute: CommandCentreRoute,
   ContactRoute: ContactRoute,
   LoginRoute: LoginRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   StudioRoute: StudioRoute,
   WorkRoute: WorkRoute,
   BlogSlugRoute: BlogSlugRoute,

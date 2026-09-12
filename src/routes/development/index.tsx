@@ -8,6 +8,7 @@ import { development } from "@/lib/site-data";
 
 export const Route = createFileRoute("/development/")({
   component: Page,
+  loader: () => ({ faqs: hubFaqs }),
   head: () => ({
     meta: [
       { title: "SEO-First Web Development Philippines | Shinobi" },
