@@ -621,28 +621,28 @@ export const notes = [
   },
   {
     "slug": "game-studio",
-    "title": "A Game Studio Needs More Than a Trailer",
+    "title": "Game Studio",
     "date": "",
     "excerpt": "Title pages, studio pages and launch URLs for a game studio in the Philippines, without turning the site into an SEO lecture.",
     "body": "Title pages, studio pages and launch URLs for a game studio in the Philippines, without turning the site into an SEO lecture."
   },
   {
     "slug": "film-production-company",
-    "title": "A Production Company the Brief Can Find",
+    "title": "Film Production Company",
     "date": "",
     "excerpt": "Credits, capabilities and project pages so a film production company in the Philippines can be found without killing the reel.",
     "body": "Credits, capabilities and project pages so a film production company in the Philippines can be found without killing the reel."
   },
   {
     "slug": "fashion-brand",
-    "title": "A Fashion Brand That Outlives the Drop",
+    "title": "Fashion Brand",
     "date": "",
     "excerpt": "Categories, products and drops a fashion brand in the Philippines can still be found for after the campaign grid dies.",
     "body": "Categories, products and drops a fashion brand in the Philippines can still be found for after the campaign grid dies."
   },
   {
     "slug": "creative-agency",
-    "title": "A Creative Agency After the Referral",
+    "title": "Creative Agency",
     "date": "",
     "excerpt": "Service pages and proof so a creative agency in the Philippines can be found when the referral pipeline slows down.",
     "body": "Service pages and proof so a creative agency in the Philippines can be found when the referral pipeline slows down."
