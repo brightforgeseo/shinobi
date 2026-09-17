@@ -8,10 +8,14 @@ import { BlogInline, parseArticle, type ArticleBlock } from "@/lib/blog-markdown
 import { notes } from "@/lib/site-data";
 
 const blogAliases: Record<string, string> = {
-  "seo-for-game-studios-philippines": "game-studio",
-  "seo-for-film-production-companies": "film-production-company",
-  "seo-for-fashion-brands-philippines": "fashion-brand",
-  "seo-for-creative-agencies-philippines": "creative-agency",
+  "seo-for-game-studios-philippines": "a-game-studio-needs-more-than-a-trailer",
+  "game-studio": "a-game-studio-needs-more-than-a-trailer",
+  "seo-for-film-production-companies": "a-production-company-the-brief-can-find",
+  "film-production-company": "a-production-company-the-brief-can-find",
+  "seo-for-fashion-brands-philippines": "a-fashion-brand-that-outlives-the-drop",
+  "fashion-brand": "a-fashion-brand-that-outlives-the-drop",
+  "seo-for-creative-agencies-philippines": "a-creative-agency-after-the-referral",
+  "creative-agency": "a-creative-agency-after-the-referral",
 };
 
 export const Route = createFileRoute("/blog/$slug")({

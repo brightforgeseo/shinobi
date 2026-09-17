@@ -620,29 +620,29 @@ export const notes = [
     "body": "Separate AI referral sessions, sampled citations and enquiries. Build repeatable measurement and choose the right work for your creative business."
   },
   {
-    "slug": "game-studio",
-    "title": "Game Studio",
+    "slug": "a-game-studio-needs-more-than-a-trailer",
+    "title": "A Game Studio Needs More Than a Trailer",
     "date": "",
     "excerpt": "Title pages, studio pages and launch URLs for a game studio in the Philippines, without turning the site into an SEO lecture.",
     "body": "Title pages, studio pages and launch URLs for a game studio in the Philippines, without turning the site into an SEO lecture."
   },
   {
-    "slug": "film-production-company",
-    "title": "Film Production Company",
+    "slug": "a-production-company-the-brief-can-find",
+    "title": "A Production Company the Brief Can Find",
     "date": "",
     "excerpt": "Credits, capabilities and project pages so a film production company in the Philippines can be found without killing the reel.",
     "body": "Credits, capabilities and project pages so a film production company in the Philippines can be found without killing the reel."
   },
   {
-    "slug": "fashion-brand",
-    "title": "Fashion Brand",
+    "slug": "a-fashion-brand-that-outlives-the-drop",
+    "title": "A Fashion Brand That Outlives the Drop",
     "date": "",
     "excerpt": "Categories, products and drops a fashion brand in the Philippines can still be found for after the campaign grid dies.",
     "body": "Categories, products and drops a fashion brand in the Philippines can still be found for after the campaign grid dies."
   },
   {
-    "slug": "creative-agency",
-    "title": "Creative Agency",
+    "slug": "a-creative-agency-after-the-referral",
+    "title": "A Creative Agency After the Referral",
     "date": "",
     "excerpt": "Service pages and proof so a creative agency in the Philippines can be found when the referral pipeline slows down.",
     "body": "Service pages and proof so a creative agency in the Philippines can be found when the referral pipeline slows down."
