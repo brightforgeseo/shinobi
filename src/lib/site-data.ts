@@ -621,31 +621,31 @@ export const notes = [
   },
   {
     "slug": "seo-for-game-studios-philippines",
-    "title": "SEO for Game Studios in the Philippines",
+    "title": "Game Studio Philippines",
     "date": "",
-    "excerpt": "Give each title a searchable home, keep studio work separate from player pages, and make launches readable. Quezon City studio of Bright Forge SEO.",
-    "body": "Give each title a searchable home, keep studio work separate from player pages, and make launches readable. Quezon City studio of Bright Forge SEO."
+    "excerpt": "What a game studio in the Philippines needs on the title page, studio page and launch URLs so players and partners can actually find the work.",
+    "body": "What a game studio in the Philippines needs on the title page, studio page and launch URLs so players and partners can actually find the work."
   },
   {
     "slug": "seo-for-film-production-companies",
-    "title": "SEO for Film Production Companies",
+    "title": "Film Production Company Philippines",
     "date": "",
-    "excerpt": "Make credits, capabilities and project pages readable for search without killing the reel. Quezon City studio of Bright Forge SEO.",
-    "body": "Make credits, capabilities and project pages readable for search without killing the reel. Quezon City studio of Bright Forge SEO."
+    "excerpt": "How a film production company in the Philippines makes credits, capabilities and project pages findable without killing the reel.",
+    "body": "How a film production company in the Philippines makes credits, capabilities and project pages findable without killing the reel."
   },
   {
     "slug": "seo-for-fashion-brands-philippines",
-    "title": "SEO for Fashion Brands in the Philippines",
+    "title": "Fashion Brand Philippines",
     "date": "",
-    "excerpt": "Keep brand language, give categories and drops a job, and put product facts in text. Quezon City studio of Bright Forge SEO.",
-    "body": "Keep brand language, give categories and drops a job, and put product facts in text. Quezon City studio of Bright Forge SEO."
+    "excerpt": "How a fashion brand in the Philippines keeps its voice while making categories, drops and product pages possible to find and buy.",
+    "body": "How a fashion brand in the Philippines keeps its voice while making categories, drops and product pages possible to find and buy."
   },
   {
     "slug": "seo-for-creative-agencies-philippines",
-    "title": "SEO for Creative Agencies in the Philippines",
+    "title": "Creative Agency Philippines",
     "date": "",
-    "excerpt": "Put the offer, proof and enquiry on URLs buyers already search. Quezon City studio of Bright Forge SEO, parent company.",
-    "body": "Put the offer, proof and enquiry on URLs buyers already search. Quezon City studio of Bright Forge SEO, parent company."
+    "excerpt": "How a creative agency in the Philippines gets found for the work it wants more of, without turning the studio into a content farm.",
+    "body": "How a creative agency in the Philippines gets found for the work it wants more of, without turning the studio into a content farm."
   },
   {
     "slug": "seo-cost-for-studios-philippines",
