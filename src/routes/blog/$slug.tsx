@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { Kicker } from "@/components/content/Editorial";
 import { PageHero } from "@/components/content/PageHero";
 import { SiteShell } from "@/components/layout/SiteShell";
@@ -7,7 +7,18 @@ import { getFieldNoteArticle } from "@/lib/blog-articles";
 import { BlogInline, parseArticle, type ArticleBlock } from "@/lib/blog-markdown";
 import { notes } from "@/lib/site-data";
 
+const blogAliases: Record<string, string> = {
+  "seo-for-game-studios-philippines": "game-studio",
+  "seo-for-film-production-companies": "film-production-company",
+  "seo-for-fashion-brands-philippines": "fashion-brand",
+  "seo-for-creative-agencies-philippines": "creative-agency",
+};
+
 export const Route = createFileRoute("/blog/$slug")({
+  beforeLoad: ({ params, location }) => {
+    const dest = blogAliases[params.slug];
+    if (dest) throw redirect({ href: `/blog/${dest}${location.searchStr}`, statusCode: 301 });
+  },
   loader: ({ params }) => {
     const record = getFieldNoteArticle(params.slug);
     if (!record) throw notFound();

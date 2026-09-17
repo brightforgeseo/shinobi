@@ -620,32 +620,32 @@ export const notes = [
     "body": "Separate AI referral sessions, sampled citations and enquiries. Build repeatable measurement and choose the right work for your creative business."
   },
   {
-    "slug": "seo-for-game-studios-philippines",
-    "title": "Game Studio Philippines",
+    "slug": "game-studio",
+    "title": "A Game Studio Needs More Than a Trailer",
     "date": "",
-    "excerpt": "What a game studio in the Philippines needs on the title page, studio page and launch URLs so players and partners can actually find the work.",
-    "body": "What a game studio in the Philippines needs on the title page, studio page and launch URLs so players and partners can actually find the work."
+    "excerpt": "Title pages, studio pages and launch URLs for a game studio in the Philippines, without turning the site into an SEO lecture.",
+    "body": "Title pages, studio pages and launch URLs for a game studio in the Philippines, without turning the site into an SEO lecture."
   },
   {
-    "slug": "seo-for-film-production-companies",
-    "title": "Film Production Company Philippines",
+    "slug": "film-production-company",
+    "title": "A Production Company the Brief Can Find",
     "date": "",
-    "excerpt": "How a film production company in the Philippines makes credits, capabilities and project pages findable without killing the reel.",
-    "body": "How a film production company in the Philippines makes credits, capabilities and project pages findable without killing the reel."
+    "excerpt": "Credits, capabilities and project pages so a film production company in the Philippines can be found without killing the reel.",
+    "body": "Credits, capabilities and project pages so a film production company in the Philippines can be found without killing the reel."
   },
   {
-    "slug": "seo-for-fashion-brands-philippines",
-    "title": "Fashion Brand Philippines",
+    "slug": "fashion-brand",
+    "title": "A Fashion Brand That Outlives the Drop",
     "date": "",
-    "excerpt": "How a fashion brand in the Philippines keeps its voice while making categories, drops and product pages possible to find and buy.",
-    "body": "How a fashion brand in the Philippines keeps its voice while making categories, drops and product pages possible to find and buy."
+    "excerpt": "Categories, products and drops a fashion brand in the Philippines can still be found for after the campaign grid dies.",
+    "body": "Categories, products and drops a fashion brand in the Philippines can still be found for after the campaign grid dies."
   },
   {
-    "slug": "seo-for-creative-agencies-philippines",
-    "title": "Creative Agency Philippines",
+    "slug": "creative-agency",
+    "title": "A Creative Agency After the Referral",
     "date": "",
-    "excerpt": "How a creative agency in the Philippines gets found for the work it wants more of, without turning the studio into a content farm.",
-    "body": "How a creative agency in the Philippines gets found for the work it wants more of, without turning the studio into a content farm."
+    "excerpt": "Service pages and proof so a creative agency in the Philippines can be found when the referral pipeline slows down.",
+    "body": "Service pages and proof so a creative agency in the Philippines can be found when the referral pipeline slows down."
   },
   {
     "slug": "seo-cost-for-studios-philippines",
