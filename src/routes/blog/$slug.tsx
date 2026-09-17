@@ -6,6 +6,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { getFieldNoteArticle } from "@/lib/blog-articles";
 import { BlogInline, parseArticle, type ArticleBlock } from "@/lib/blog-markdown";
 import { notes } from "@/lib/site-data";
+import { displayH1 } from "@/lib/blog-display";
 
 const blogAliases: Record<string, string> = {
   "seo-for-game-studios-philippines": "a-game-studio-needs-more-than-a-trailer",
@@ -61,7 +62,7 @@ function FieldNotePage() {
   const related = notes.filter((entry) => entry.slug !== record.slug).slice(0, 3);
   return (
     <SiteShell>
-      <PageHero chapter="11" jp="手記" kicker={record.readingTime} title={article.title} />
+      <PageHero chapter="11" jp="手記" kicker={record.readingTime} title={displayH1(record.slug, article.title)} />
       <article data-engine-job={record.engineJob} data-article-sha256={record.sha256}>
         <section className="border-b-[3px] border-ink">
           <div className="mx-auto max-w-3xl space-y-5 px-5 py-12 sm:px-8">
@@ -87,7 +88,7 @@ function FieldNotePage() {
             {related.map((entry) => (
               <li key={entry.slug}>
                 <Link to="/blog/$slug" params={{ slug: entry.slug }} className="manga-panel block h-full p-5 hover:bg-paper-2">
-                  <h2 className="mt-2 font-display text-lg">{entry.title}</h2>
+                  <h2 className="mt-2 font-display text-lg">{displayH1(entry.slug, entry.title)}</h2>
                 </Link>
               </li>
             ))}

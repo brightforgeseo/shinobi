@@ -558,14 +558,14 @@ export const quotes = [
 export const notes = [
   {
     "slug": "six-month-seo-myth",
-    "title": "The Six-Month SEO Myth",
+    "title": "Six Month SEO Myth",
     "date": "",
     "excerpt": "Build an SEO timeline around verified changes, indexing, relevant searches and enquiries. Learn what to review before waiting or spending more.",
     "body": "Build an SEO timeline around verified changes, indexing, relevant searches and enquiries. Learn what to review before waiting or spending more."
   },
   {
     "slug": "audits-that-miss",
-    "title": "SEO Audits That Miss the Point",
+    "title": "Audits That Miss",
     "date": "",
     "excerpt": "Learn how to turn SEO audit warnings into prioritised tasks with evidence, clear owners, acceptance checks and live retests for creative websites.",
     "body": "Learn how to turn SEO audit warnings into prioritised tasks with evidence, clear owners, acceptance checks and live retests for creative websites."
@@ -579,42 +579,42 @@ export const notes = [
   },
   {
     "slug": "local-seo-small-business",
-    "title": "Local SEO for Small Businesses",
+    "title": "Local SEO Small Business",
     "date": "",
     "excerpt": "Prioritise accurate business details, useful local pages, genuine reviews and clear enquiry paths for your creative studio or venue.",
     "body": "Prioritise accurate business details, useful local pages, genuine reviews and clear enquiry paths for your creative studio or venue."
   },
   {
     "slug": "portfolio-rendering-checks",
-    "title": "Can Search Read Your Creative Portfolio?",
+    "title": "Portfolio Rendering Checks",
     "date": "",
     "excerpt": "Check your portfolio’s initial HTML, rendered content and Google crawler evidence to find missing project text and links without stripping out the motion.",
     "body": "Check your portfolio’s initial HTML, rendered content and Google crawler evidence to find missing project text and links without stripping out the motion."
   },
   {
     "slug": "game-website-search-ownership",
-    "title": "Mapping Search Ownership for a Game Website",
+    "title": "Game Website Search Ownership",
     "date": "",
     "excerpt": "Decide which game pages should own title, franchise, release, availability and support questions, when to add URLs and how to preserve useful links.",
     "body": "Decide which game pages should own title, franchise, release, availability and support questions, when to add URLs and how to preserve useful links."
   },
   {
     "slug": "collections-versus-categories",
-    "title": "Seasonal Collections or Evergreen Categories?",
+    "title": "Collections Versus Categories",
     "date": "",
     "excerpt": "Choose ecommerce collections and categories by buyer purpose, stock continuity, useful content and navigation, with a practical plan for retiring seasonal pages.",
     "body": "Choose ecommerce collections and categories by buyer purpose, stock continuity, useful content and navigation, with a practical plan for retiring seasonal pages."
   },
   {
     "slug": "video-performance-without-losing-design",
-    "title": "Improving Video Performance Without Losing the Design",
+    "title": "Video Performance Without Losing Design",
     "date": "",
     "excerpt": "Improve video website performance with repeatable tests for loading, encoding and playback, while preserving the visual quality of your creative work.",
     "body": "Improve video website performance with repeatable tests for loading, encoding and playback, while preserving the visual quality of your creative work."
   },
   {
     "slug": "ai-referrals-versus-citations",
-    "title": "AI Referrals Are Not Citation Share",
+    "title": "AI Referrals Versus Citations",
     "date": "",
     "excerpt": "Separate AI referral sessions, sampled citations and enquiries. Build repeatable measurement and choose the right work for your creative business.",
     "body": "Separate AI referral sessions, sampled citations and enquiries. Build repeatable measurement and choose the right work for your creative business."
@@ -649,7 +649,7 @@ export const notes = [
   },
   {
     "slug": "seo-cost-for-studios-philippines",
-    "title": "What SEO Costs for a Studio in the Philippines",
+    "title": "SEO Cost for Studios Philippines",
     "date": "",
     "excerpt": "Read Philippine SEO cost as scope and market bands, not a public Shinobi menu. Quezon City studio of Bright Forge SEO.",
     "body": "Read Philippine SEO cost as scope and market bands, not a public Shinobi menu. Quezon City studio of Bright Forge SEO."
@@ -670,7 +670,7 @@ export const notes = [
   },
   {
     "slug": "quezon-city-seo-studio",
-    "title": "A Quezon City SEO Studio for Creative Work",
+    "title": "Quezon City SEO Studio",
     "date": "",
     "excerpt": "A real Quezon City SEO studio for creative work, parented by Bright Forge SEO. No fake Cebu or Davao offices.",
     "body": "A real Quezon City SEO studio for creative work, parented by Bright Forge SEO. No fake Cebu or Davao offices."
