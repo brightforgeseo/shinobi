@@ -11,9 +11,9 @@ test('blog listing is exact approved metadata with no invented dates', () => {
   const notes=JSON.parse(text.match(/export const notes = (\[[\s\S]*?\n\]);/)[1]);
   assert.deepEqual(notes,fieldNoteArticles.map(a=>({slug:a.slug,title:a.title,date:'',excerpt:a.metaDescription,body:a.metaDescription})));
 });
-test('all nine blog records retain exact staged Proof-approved Markdown bytes', () => {
-  assert.equal(fieldNoteArticles.length, 9);
-  assert.equal(new Set(fieldNoteArticles.map(a=>a.slug)).size, 9);
+test('original nine blog records retain exact staged Proof-approved Markdown bytes', () => {
+  assert.equal(fieldNoteArticles.length, 17);
+  assert.equal(new Set(fieldNoteArticles.map(a=>a.slug)).size, 17);
   for (let i=0;i<9;i++) {
     const record=fieldNoteArticles[i];
     const packageRoot=`${root}/SHINOBI-${String(i+1).padStart(2,'0')}`;

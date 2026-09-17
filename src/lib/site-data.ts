@@ -618,6 +618,62 @@ export const notes = [
     "date": "",
     "excerpt": "Separate AI referral sessions, sampled citations and enquiries. Build repeatable measurement and choose the right work for your creative business.",
     "body": "Separate AI referral sessions, sampled citations and enquiries. Build repeatable measurement and choose the right work for your creative business."
+  },
+  {
+    "slug": "seo-for-game-studios-philippines",
+    "title": "SEO for Game Studios in the Philippines",
+    "date": "",
+    "excerpt": "Give each title a searchable home, keep studio work separate from player pages, and make launches readable. Quezon City studio of Bright Forge SEO.",
+    "body": "Give each title a searchable home, keep studio work separate from player pages, and make launches readable. Quezon City studio of Bright Forge SEO."
+  },
+  {
+    "slug": "seo-for-film-production-companies",
+    "title": "SEO for Film Production Companies",
+    "date": "",
+    "excerpt": "Make credits, capabilities and project pages readable for search without killing the reel. Quezon City studio of Bright Forge SEO.",
+    "body": "Make credits, capabilities and project pages readable for search without killing the reel. Quezon City studio of Bright Forge SEO."
+  },
+  {
+    "slug": "seo-for-fashion-brands-philippines",
+    "title": "SEO for Fashion Brands in the Philippines",
+    "date": "",
+    "excerpt": "Keep brand language, give categories and drops a job, and put product facts in text. Quezon City studio of Bright Forge SEO.",
+    "body": "Keep brand language, give categories and drops a job, and put product facts in text. Quezon City studio of Bright Forge SEO."
+  },
+  {
+    "slug": "seo-for-creative-agencies-philippines",
+    "title": "SEO for Creative Agencies in the Philippines",
+    "date": "",
+    "excerpt": "Put the offer, proof and enquiry on URLs buyers already search. Quezon City studio of Bright Forge SEO, parent company.",
+    "body": "Put the offer, proof and enquiry on URLs buyers already search. Quezon City studio of Bright Forge SEO, parent company."
+  },
+  {
+    "slug": "seo-cost-for-studios-philippines",
+    "title": "What SEO Costs for a Studio in the Philippines",
+    "date": "",
+    "excerpt": "Read Philippine SEO cost as scope and market bands, not a public Shinobi menu. Quezon City studio of Bright Forge SEO.",
+    "body": "Read Philippine SEO cost as scope and market bands, not a public Shinobi menu. Quezon City studio of Bright Forge SEO."
+  },
+  {
+    "slug": "white-label-seo-for-agencies",
+    "title": "White Label SEO for Agencies",
+    "date": "",
+    "excerpt": "Senior white-label SEO an agency can defend, with approval gates and no junk packages. Quezon City studio of Bright Forge SEO.",
+    "body": "Senior white-label SEO an agency can defend, with approval gates and no junk packages. Quezon City studio of Bright Forge SEO."
+  },
+  {
+    "slug": "hiring-seo-before-a-game-launch",
+    "title": "Hiring SEO Before a Game Launch",
+    "date": "",
+    "excerpt": "Hire SEO while title URLs and templates can still change, not after the trailer. Quezon City studio of Bright Forge SEO.",
+    "body": "Hire SEO while title URLs and templates can still change, not after the trailer. Quezon City studio of Bright Forge SEO."
+  },
+  {
+    "slug": "quezon-city-seo-studio",
+    "title": "A Quezon City SEO Studio for Creative Work",
+    "date": "",
+    "excerpt": "A real Quezon City SEO studio for creative work, parented by Bright Forge SEO. No fake Cebu or Davao offices.",
+    "body": "A real Quezon City SEO studio for creative work, parented by Bright Forge SEO. No fake Cebu or Davao offices."
   }
 ];
 
